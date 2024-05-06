@@ -1,0 +1,5 @@
+_G.HideCharacter = false 
+_G.DaHood = false
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Nitro-GT/OxideReanim/main/postpdexp6"))()
+wait(.1)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Nitro-GT/NFLC/main/main"))()
