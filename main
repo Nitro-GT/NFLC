@@ -17,7 +17,7 @@ warn([[
 Nitro's FE Lightning Cannon:
 Press M to Switch Modes 
 Click to Shoot (does nothing)
-Used Nitro's Oxide Reanim                                                                                                      
+Uses Nitro's Oxide Reanim                                                                                                
 ]])
 -- ec4
 _G.LightingVis = false
