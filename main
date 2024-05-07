@@ -260,13 +260,15 @@ RotationOffset2 = CFrame.Angles(
    math.rad(RotationOffset2.Z)
 )
 
-local CFrameOffset = CFrame.new(PositionOffset2)*RotationOffset2
+local CFrameOffset2 = CFrame.new(PositionOffset2)*RotationOffset2
 
-local weld = Instance.new("Weld")
-weld.C1 = CFrameOffset
-weld.Parent = game.Players.LocalPlayer.Character["Accessory (VoidAlligatorJaw)"].Handle
-weld.Part0 = game.Players.LocalPlayer.Character["Accessory (VoidAlligatorJaw)"].Handle
-weld.Part1 = GUN.Base
+local weld2 = Instance.new("Weld")
+weld2.C1 = CFrameOffset2
+weld2.Parent = game.Players.LocalPlayer.Character["Accessory (VoidAlligatorJaw)"].Handle
+weld2.Part0 = game.Players.LocalPlayer.Character["Accessory (VoidAlligatorJaw)"].Handle
+weld2.Part1 = GUN.Base
+
+
 
 else
    print("")
