@@ -27,6 +27,9 @@ _G.ExtraControllerHelp = false -- lets you see where the shot will go if fling i
 local Defaults = {Defaults = {Neck = {C0 = CFrame.new(0,1,0)*CFrame.Angles(math.rad(-90),0,math.rad(180))},RootJoint = {C0 = CFrame.new()*CFrame.Angles(math.rad(-90),0,math.rad(180))},RightShoulder = {C0 = CFrame.new(-.5,0,0)*CFrame.Angles(0,math.rad(90),0)},LeftShoulder = {C0 = CFrame.new(.5,0,0)*CFrame.Angles(0,math.rad(-90),0)}},Neck = {C0 = CFrame.new(),C1 = CFrame.new(0,-.5,0,-1,0,0,0,0,1,0,1,0)},RootJoint = {C0 = CFrame.new(),C1 = CFrame.new(0,0,0,-1,0,0,0,0,1,0,1,0)},RightShoulder = {C0 = CFrame.new(),C1 = CFrame.new(-.5,.5,0,0,0,1,0,1,0,-1,0,0)},LeftShoulder = {C0 = CFrame.new(),C1 = CFrame.new(.5,.5,0,0,0,-1,0,1,0,1,0,0)},RightHip = {C0 = CFrame.new(),C1 = CFrame.new(.5,1,0,0,0,1,0,1,0,-1,0,0)},LeftHip = {C0 = CFrame.new(),C1 = CFrame.new(-.5,1,0,0,0,-1,0,1,0,1,0,0)},None = {C0 = CFrame.new(),C1 = CFrame.new()},Hair = {C0 = CFrame.new(.16,.5,0)*CFrame.Angles(0,math.rad(180),0),C1 = CFrame.new()},GunJoint = {C0 = CFrame.new(.05,-1,-.15)*CFrame.Angles(math.rad(-90),0,0),C1 = CFrame.new()},GunBase = {C0 = CFrame.new(0,1.305,-2.108)*CFrame.Angles(0,math.rad(-90),math.rad(-45)),C1 = CFrame.new()},GunGlow = {C0 = CFrame.new(-.024,1.369,-1.26)*CFrame.Angles(0,0,math.rad(-140.59)),C1 = CFrame.new()},GunAdditions = {C0 = CFrame.new(-.004,1.204,.505)*CFrame.Angles(0,math.rad(-90),0),C1 = CFrame.new()},Hole = {C0 = CFrame.new(-.001,1.538,-3.342)*CFrame.Angles(0,math.rad(-90),0),C1 = CFrame.new()},Hole2 = {C0 = CFrame.new(-.001,1.538,-9.142),C1 = CFrame.new()},RightWing = {C0 = CFrame.new(.15,.5,.5)*CFrame.Angles(0,math.rad(90),0),C1 = CFrame.new(1.1,1,-.75)},LeftWing = {C0 = CFrame.new(-.15,.5,.5)*CFrame.Angles(0,math.rad(90),0),C1 = CFrame.new(1.1,1,.75)}}
 local customasset
 
+if not isfile("NFLC/foolhardy.mp3") then
+writefile("NFLC/foolhardy.mp3",game:HttpGet("https://github.com/Nitro-GT/music/raw/main/foolhardy.mp3"))
+end
 
 local getsyn = getcustomasset
 local s = nil
@@ -1835,7 +1838,12 @@ Mouse.KeyDown:Connect(function(k)
 		   TauntRemote:FireServer("Chill",1338971957)
 				   sound69:Play()
 			   sound69.SoundId = customasset("NFLC/200ping.mp3")
-	   elseif songid.Value == "rbxassetid://262950484" then
+               	   elseif songid.Value == "rbxassetid://262950484" then
+		   TauntRemote:FireServer("purple",1234)
+				   sound69:Play()
+			   sound69.SoundId = customasset("NFLC/foolhardy.mp3")
+               
+	   elseif songid.Value == "rbxassetid://1234" then
 		   TauntRemote:FireServer("Alastor",5460732000)
 				   sound69:Play()
 			   sound69.SoundId = customasset("NFLC/alastor.mp3")
@@ -2740,6 +2748,35 @@ while not stopeverything do
 			   GUN.NeonParts.Transparency = 1
 		   end
 		   Humanoid.WalkSpeed = walkspeed/3.125
+           	elseif taunt.Value == "purple" then
+			RootJoint.C1 = Clerp(RootJoint.C1,ROOTC0,.2/3)
+			Neck.C1 = Clerp(Neck.C1,CFrame.new(0,-.5,0) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(180)),.2/3)
+			RightHip.C1 = Clerp(RightHip.C1,CFrame.new(.5,1,0,-4.37113918e-08,0,1,0,1,0,-1,0,-4.37113918e-08),1)
+			LeftHip.C1 = Clerp(LeftHip.C1,CFrame.new(-.5,1,0,-4.37113918e-08,-0,-1,0,1,-0,1,0,-4.37113918e-08),1)
+			RightShoulder.C1 = Clerp(RightShoulder.C1,CFrame.new(-.5,.5,0,0,0,1,0,1,-0,-1,0,0),1)
+			LeftShoulder.C1 = Clerp(LeftShoulder.C1,CFrame.new(.5,.499975681,0,0,0,-1,0,1,0,1,0,0),1)
+			if not attack then
+				if Torsovelocity < sensitivity then
+					Humanoid.HipHeight = 1.5
+					RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CFrame.new(0, 0, 1.5 + 1 * math.cos(sine / 39)) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(10)),0.8)
+					Neck.C0 = Clerp(Neck.C0, NECKC0 * CFrame.new(0, 0, 0 + ((1) - 1)) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)),1/2)
+					RightShoulder.C0 = Clerp(RightShoulder.C0, CFrame.new(1.5, 0.5, 0) * CFrame.Angles(math.rad(-41.6-4*math.sin(sine/25)), math.rad(math.random(-0.25,3)), math.rad(math.random(0.25,3)))* RIGHTSHOULDERC0, .7 / 3)
+					LeftShoulder.C0 = Clerp(LeftShoulder.C0, CFrame.new(-1.5, 0.5, 0) * CFrame.Angles(math.rad(40+sound69.PlaybackLoudness/7.5), math.rad(0), math.rad(-10)) * LEFTSHOULDERC0,1)
+					RightHip.C0 = Clerp(RightHip.C0, CFrame.new(1 , -1, 0) * CFrame.Angles(math.rad(0), math.rad(80+10* math.sin(sine / 78)), math.rad(0)) * CFrame.Angles(math.rad(-3+1* math.sin(sine / 58)), math.rad(0), math.rad(2.5+8 * math.sin(sine / 43))),0.8)
+					LeftHip.C0 = Clerp(LeftHip.C0, CFrame.new(-1, -0.5, -0.5) * CFrame.Angles(math.rad(0), math.rad(-80-10* math.sin(sine / 81)), math.rad(0)) * CFrame.Angles(math.rad(-3+1* math.sin(sine / 63)), math.rad(0), math.rad(0+15 * math.sin(sine / 49))),0.8)
+			  GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-106.3-.9*math.cos(sine/12)),math.rad(0),math.rad(0)),1 / 2)
+            	elseif Torsovelocity >= sensitivity then
+					Anim = "Walk"
+					Humanoid.HipHeight = 1.5
+					RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CFrame.new(0 - 0.15 * math.cos(sine / 47), -0.5, 0.5 + 0.1 * math.cos(sine / 28)) * CFrame.Angles(math.rad(70), math.rad(0 - RootPart.RotVelocity.Y), math.rad(0 - RootPart.RotVelocity.Y * 4.5 + 3 * math.cos(sine / 47))), .2 / 3)
+					Neck.C0 = Clerp(Neck.C0, NECKC0 * CFrame.new(0, 0, 0 + ((1) - 1)) * CFrame.Angles(math.rad(-17 - 5 * math.cos(sine / 52)), math.rad(0 - 3 * math.cos(sine / 37)), math.rad(0 + 2 * math.cos(sine / 78))), .2 / 3)
+					RightShoulder.C0 = Clerp(RightShoulder.C0, CFrame.new(1.5, 0.5 + 0.05 * math.cos(sine / 28), 0) * CFrame.Angles(math.rad(-8 - 4 * math.cos(sine / 59)), math.rad(-20 + 7 * math.cos(sine / 62)), math.rad(20 + 5 * math.cos(sine / 50)))* RIGHTSHOULDERC0, .2 / 3)
+					LeftShoulder.C0 = Clerp(LeftShoulder.C0, CFrame.new(-1.5, 0.5 + 0.1 * math.cos(sine / 28), 0) * CFrame.Angles(math.rad(-8 - 3 * math.cos(sine / 55)), math.rad(20 + 8 * math.cos(sine / 67)), math.rad(-20 - 4 * math.cos(sine / 29))) * LEFTSHOULDERC0, .2 / 3)
+					RightHip.C0 = Clerp(RightHip.C0, CFrame.new(1 , -0.5, -0.6) * CFrame.Angles(math.rad(0), math.rad(90), math.rad(0)) * CFrame.Angles(math.rad(1.5), math.rad(0), math.rad(-20 - 5 * math.cos(sine / 34))), .2 / 3)
+					LeftHip.C0 = Clerp(LeftHip.C0, CFrame.new(-1, -1, 0) * CFrame.Angles(math.rad(0), math.rad(-90), math.rad(0)) * CFrame.Angles(math.rad(1), math.rad(0), math.rad(20 + 2 * math.cos(sine / 38))), .2 / 3)
+                    				   GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1)
+				end
+			end
 	   elseif taunt.Value == "Chill" then
 		   RootJoint.C1 = Clerp(RootJoint.C1,ROOTC0,.2/3)
 		   Neck.C1 = Clerp(Neck.C1,CFrame.new(0,-.5,0) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(180)),.2/3)
