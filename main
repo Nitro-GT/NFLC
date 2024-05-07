@@ -1907,7 +1907,7 @@ Mouse.KeyDown:Connect(function(k)
 			   sound69.SoundId = customasset("NFLC/solidlc.mp3")
 				   correction = true
                                   	   elseif songid.Value == "rbxassetid://348832364" then
-		   TauntRemote:FireServer("sis",12)
+		   TauntRemote:FireServer("sis",654)
                			  				   sound69:Play()
 			   sound69.SoundId = customasset("NFLC/dont.mp3")
 	   elseif songid.Value == "rbxassetid://1338971957" then
