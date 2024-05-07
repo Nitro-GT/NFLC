@@ -1873,7 +1873,11 @@ Mouse.KeyDown:Connect(function(k)
 			oldtexture = face.Texture
 		   sound69.SoundId = customasset("NFLC/bloodwater.mp3")
 			   correction = true
-	   elseif songid.Value == "rbxassetid://4835535512" then
+               	   elseif songid.Value == "rbxassetid://4835535512" then
+		   TauntRemote:FireServer("MaddoxLCv3_9",12)
+               			  				   sound69:Play()
+			   sound69.SoundId = customasset("NFLC/MLCV39.mp3")
+	   elseif songid.Value == "rbxassetid://12" then
 		   TauntRemote:FireServer("Lord",2371543268)
 			   sound69:Play()
 		   sound69.SoundId = customasset("NFLC/allgirls.mp3")
@@ -2635,7 +2639,8 @@ while not stopeverything do
 		   end
 	   end
 	   Torsovelocity = (RootPart.Velocity).Magnitude
-	   sine = sine + 1
+        sine = sine + 1
+		T = T + 1
 	   local sensitivity = 25
 	   if taunt.Value == "FAST BOIII" then
 		   for i,v in pairs(Character.Wings:GetChildren()) do
@@ -3182,7 +3187,7 @@ while not stopeverything do
 			   GUN.NeonParts.Transparency = 1
 		   end
 elseif taunt.Value == "MaddoxLCv3_9" then
-				   RootJoint.C1 = Clerp(RootJoint.C1,ROOTC0,.2/3)
+			RootJoint.C1 = Clerp(RootJoint.C1,ROOTC0,.2/3)
 		   Neck.C1 = Clerp(Neck.C1,CFrame.new(0,-.5,0) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(180)),.2/3)
 		   RightHip.C1 = Clerp(RightHip.C1,CFrame.new(.5,1,0,-4.37113918e-08,0,1,0,1,0,-1,0,-4.37113918e-08),1)
 		   LeftHip.C1 = Clerp(LeftHip.C1,CFrame.new(-.5,1,0,-4.37113918e-08,-0,-1,0,1,-0,1,0,-4.37113918e-08),1)
@@ -3197,7 +3202,8 @@ elseif taunt.Value == "MaddoxLCv3_9" then
 				   LeftShoulder.C0 = Clerp(LeftShoulder.C0, CFrame.new(-1.5, .5 - .125 * math.cos(T / 30), 0) * CFrame.Angles(math.rad(15 * math.cos(T / 30)), math.rad(5), math.rad(-10 + 15 * math.cos(T / 30))) * lsco, .25)
 				   RightHip.C0 = Clerp(RightHip.C0, CFrame.new(1, -.5 + .25 * math.sin(T / 30), -.5) * CFrame.Angles(math.rad(-15), math.rad(80), math.rad(15 + 15 * math.sin(T / 30))), .25)
 				   LeftHip.C0 = Clerp(LeftHip.C0, CFrame.new(-1, -1 + .25 * math.cos(T / 30), 0) * CFrame.Angles(0, math.rad(-80), math.rad(-10 - 10 * math.sin(T / 30))), .25)
-			   elseif Torsovelocity >= sensitivity then
+			    GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1/2)
+               elseif Torsovelocity >= sensitivity then
 				   Anim = "Walk"
 				   RootJoint.C0 = Clerp(RootJoint.C0, rco * CFrame.new(0, 0, 0.5 * math.sin(T / 15)) * CFrame.Angles(math.rad(45), math.rad(0 - 2 * math.sin(T / 30)), 0), .25)
 				   Neck.C0 = Clerp(Neck.C0, nco * CFrame.new(0, 0, 0 + 1 - 1) * CFrame.Angles(math.rad(-45 + 3 * math.sin(T / 54 * 1.2)), math.rad(0 - 4 * math.sin(T / 30)), 0), .25)
@@ -3205,7 +3211,8 @@ elseif taunt.Value == "MaddoxLCv3_9" then
 				   LeftShoulder.C0 = Clerp(LeftShoulder.C0, CFrame.new(-1.5, 0.5, 0) * CFrame.Angles(math.rad(-45), math.rad(2), 0) * lsco, .25)
 				   RightHip.C0 = Clerp(RightHip.C0, CFrame.new(1, -.5 + .1 * math.cos(T / 15), -.5) * CFrame.Angles(math.rad(-15 + 9 * math.cos(T / 15)), math.rad(80), 0) * CFrame.Angles(0, 0, 0), .25)
 				   LeftHip.C0 = Clerp(LeftHip.C0, CFrame.new(-1, -1 + .1 * math.sin(T / 15), 0) * CFrame.Angles(math.rad(-15 + 9 * math.cos(T / 15)), math.rad(-80), 0) * CFrame.Angles(0, 0, 0), .25)
-			   end
+			    GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1/2)
+               end
 			   Humanoid.HipHeight = 2
 		   end
 	   elseif taunt.Value == "hi" then
@@ -3321,6 +3328,34 @@ elseif taunt.Value == "MaddoxLCv3_9" then
 			   GUN.GunAdditions.Transparency = 1
 			   GUN.NeonParts.Transparency = 1
 		   end
+           elseif taunt.Value == "MaddoxLCv3_9" then
+			RootJoint.C1 = Clerp(RootJoint.C1,ROOTC0,.2/3)
+			Neck.C1 = Clerp(Neck.C1,CFrame.new(0,-.5,0) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(180)),.2/3)
+			RightHip.C1 = Clerp(RightHip.C1,CFrame.new(.5,1,0,-4.37113918e-08,0,1,0,1,0,-1,0,-4.37113918e-08),1)
+			LeftHip.C1 = Clerp(LeftHip.C1,CFrame.new(-.5,1,0,-4.37113918e-08,-0,-1,0,1,-0,1,0,-4.37113918e-08),1)
+			RightShoulder.C1 = Clerp(RightShoulder.C1,CFrame.new(-.5,.5,0,0,0,1,0,1,-0,-1,0,0),1)
+			LeftShoulder.C1 = Clerp(LeftShoulder.C1,CFrame.new(.5,.499975681,0,0,0,-1,0,1,0,1,0,0),1)
+			if not attack then
+				if Torsovelocity < sensitivity then
+					Anim = "Idle"
+					RootJoint.C0 = Clerp(RootJoint.C0, rco * CFrame.new(0, 0, 0.5 * math.sin(T / 15)) * CFrame.Angles(math.rad(-15 * math.cos(T / 30)), math.rad(-15 * math.cos(T / 30)), 0), .25)
+					Neck.C0 = Clerp(Neck.C0, nco * CFrame.Angles(math.rad(15 * math.sin(T / 30)), 0, math.rad(-15 * math.sin(T / 30))), .25)
+					RightShoulder.C0 = Clerp(RightShoulder.C0, CFrame.new(1.5, .5 - .125 * math.sin(T / 30), 0) * CFrame.Angles(math.rad(135 + -15 * math.cos(T / 30)), 0, math.rad(25 + 15 * math.cos(T / 30))) * rsco, .25)
+					LeftShoulder.C0 = Clerp(LeftShoulder.C0, CFrame.new(-1.5, .5 - .125 * math.cos(T / 30), 0) * CFrame.Angles(math.rad(15 * math.cos(T / 30)), math.rad(5), math.rad(-10 + 15 * math.cos(T / 30))) * lsco, .25)
+					RightHip.C0 = Clerp(RightHip.C0, CFrame.new(1, -.5 + .25 * math.sin(T / 30), -.5) * CFrame.Angles(math.rad(-15), math.rad(80), math.rad(15 + 15 * math.sin(T / 30))), .25)
+					LeftHip.C0 = Clerp(LeftHip.C0, CFrame.new(-1, -1 + .25 * math.cos(T / 30), 0) * CFrame.Angles(0, math.rad(-80), math.rad(-10 - 10 * math.sin(T / 30))), .25)
+				
+                elseif Torsovelocity >= sensitivity then
+					Anim = "Walk"
+					RootJoint.C0 = Clerp(RootJoint.C0, rco * CFrame.new(0, 0, 0.5 * math.sin(T / 15)) * CFrame.Angles(math.rad(45), math.rad(0 - 2 * math.sin(T / 30)), 0), .25)
+					Neck.C0 = Clerp(Neck.C0, nco * CFrame.new(0, 0, 0 + 1 - 1) * CFrame.Angles(math.rad(-45 + 3 * math.sin(T / 54 * 1.2)), math.rad(0 - 4 * math.sin(T / 30)), 0), .25)
+					RightShoulder.C0 = Clerp(RightShoulder.C0, CFrame.new(1.5, 0.5, 0) * CFrame.Angles(math.rad(-45), math.rad(-2), 0) * rsco, .25)
+					LeftShoulder.C0 = Clerp(LeftShoulder.C0, CFrame.new(-1.5, 0.5, 0) * CFrame.Angles(math.rad(-45), math.rad(2), 0) * lsco, .25)
+					RightHip.C0 = Clerp(RightHip.C0, CFrame.new(1, -.5 + .1 * math.cos(T / 15), -.5) * CFrame.Angles(math.rad(-15 + 9 * math.cos(T / 15)), math.rad(80), 0) * CFrame.Angles(0, 0, 0), .25)
+					LeftHip.C0 = Clerp(LeftHip.C0, CFrame.new(-1, -1 + .1 * math.sin(T / 15), 0) * CFrame.Angles(math.rad(-15 + 9 * math.cos(T / 15)), math.rad(-80), 0) * CFrame.Angles(0, 0, 0), .25)
+				end
+				Humanoid.HipHeight = 2
+			end
 	   elseif taunt.Value == "kArmA" then
 		   RootJoint.C1 = Clerp(RootJoint.C1,ROOTC0,.2/3)
 		   Neck.C1 = Clerp(Neck.C1,CFrame.new(0,-.5,0) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(180)),.2/3)
