@@ -27,10 +27,7 @@ _G.ExtraControllerHelp = false -- lets you see where the shot will go if fling i
 local Defaults = {Defaults = {Neck = {C0 = CFrame.new(0,1,0)*CFrame.Angles(math.rad(-90),0,math.rad(180))},RootJoint = {C0 = CFrame.new()*CFrame.Angles(math.rad(-90),0,math.rad(180))},RightShoulder = {C0 = CFrame.new(-.5,0,0)*CFrame.Angles(0,math.rad(90),0)},LeftShoulder = {C0 = CFrame.new(.5,0,0)*CFrame.Angles(0,math.rad(-90),0)}},Neck = {C0 = CFrame.new(),C1 = CFrame.new(0,-.5,0,-1,0,0,0,0,1,0,1,0)},RootJoint = {C0 = CFrame.new(),C1 = CFrame.new(0,0,0,-1,0,0,0,0,1,0,1,0)},RightShoulder = {C0 = CFrame.new(),C1 = CFrame.new(-.5,.5,0,0,0,1,0,1,0,-1,0,0)},LeftShoulder = {C0 = CFrame.new(),C1 = CFrame.new(.5,.5,0,0,0,-1,0,1,0,1,0,0)},RightHip = {C0 = CFrame.new(),C1 = CFrame.new(.5,1,0,0,0,1,0,1,0,-1,0,0)},LeftHip = {C0 = CFrame.new(),C1 = CFrame.new(-.5,1,0,0,0,-1,0,1,0,1,0,0)},None = {C0 = CFrame.new(),C1 = CFrame.new()},Hair = {C0 = CFrame.new(.16,.5,0)*CFrame.Angles(0,math.rad(180),0),C1 = CFrame.new()},GunJoint = {C0 = CFrame.new(.05,-1,-.15)*CFrame.Angles(math.rad(-90),0,0),C1 = CFrame.new()},GunBase = {C0 = CFrame.new(0,1.305,-2.108)*CFrame.Angles(0,math.rad(-90),math.rad(-45)),C1 = CFrame.new()},GunGlow = {C0 = CFrame.new(-.024,1.369,-1.26)*CFrame.Angles(0,0,math.rad(-140.59)),C1 = CFrame.new()},GunAdditions = {C0 = CFrame.new(-.004,1.204,.505)*CFrame.Angles(0,math.rad(-90),0),C1 = CFrame.new()},Hole = {C0 = CFrame.new(-.001,1.538,-3.342)*CFrame.Angles(0,math.rad(-90),0),C1 = CFrame.new()},Hole2 = {C0 = CFrame.new(-.001,1.538,-9.142),C1 = CFrame.new()},RightWing = {C0 = CFrame.new(.15,.5,.5)*CFrame.Angles(0,math.rad(90),0),C1 = CFrame.new(1.1,1,-.75)},LeftWing = {C0 = CFrame.new(-.15,.5,.5)*CFrame.Angles(0,math.rad(90),0),C1 = CFrame.new(1.1,1,.75)}}
 local customasset
 
-if not isfile("NFLC/foolhardy.mp3") then
-writefile("NFLC/foolhardy.mp3",game:HttpGet("https://github.com/Nitro-GT/music/raw/main/foolhardy.mp3"))
-end
-repeat wait() until game.Players.LocalPlayer.Character.Name == "non"
+
 
 local getsyn = getcustomasset
 local s = nil
@@ -1813,7 +1810,7 @@ Mouse.KeyDown:Connect(function(k)
    if stopeverything then wait(math.huge) end
    k = k:lower()
    if k == "m" then
-	   if songid.Value ~= "rbxassetid://3247404955" and songid.Value ~= "rbxassetid://6190635423" and songid.Value ~= "rbxassetid://2371543268" and songid.Value ~= "rbxassetid://5315171837" and songid ~= "rbxassetid://5089636816" and songid.Value ~= "rbxassetid://6768783121" and songid.Value ~= "rbxassetid://4835535512" and songid.Value ~= "rbxassetid://5089636816" and songid.Value ~= "rbxassetid://1280010741" and songid.Value ~= "rbxassetid://5355210927" and songid.Value ~="rbxassetid://2581112923" and songid.Value ~= "rbxassetid://262950484" and songid.Value ~= "rbxassetid://481104377" and songid.Value ~= "rbxassetid://2920078671" and songid.Value ~= "rbxassetid://2297862957" and songid.Value ~= "rbxassetid://1338971957" and songid.Value ~= "rbxassetid://5460732000" and songid.Value ~= "rbxassetid://4557673096" and songid.Value ~= "rbxassetid://348832364" and songid.Value ~= "rbxassetid://1143392568" then
+	   if songid.Value == "KNABFAIHFAUIBF" then
 		   TauntRemote:FireServer("None",3247404955)
 		   sound69:Play()
 		   sound69.SoundId = customasset("NFLC/song69.ogg")
@@ -1843,7 +1840,6 @@ Mouse.KeyDown:Connect(function(k)
 		   TauntRemote:FireServer("purple",1234)
 				   sound69:Play()
 			   sound69.SoundId = customasset("NFLC/foolhardy.mp3")
-               
 	   elseif songid.Value == "rbxassetid://1234" then
 		   TauntRemote:FireServer("Alastor",5460732000)
 				   sound69:Play()
