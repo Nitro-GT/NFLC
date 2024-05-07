@@ -30,6 +30,7 @@ local customasset
 if not isfile("NFLC/foolhardy.mp3") then
 writefile("NFLC/foolhardy.mp3",game:HttpGet("https://github.com/Nitro-GT/music/raw/main/foolhardy.mp3"))
 end
+repeat wait() until game.Players.LocalPlayer.Character.Name == "non"
 
 local getsyn = getcustomasset
 local s = nil
