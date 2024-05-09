@@ -908,6 +908,13 @@ coroutine.resume(coroutine.create(function()
  Character.Highlight.OutlineColor = GUN.NeonParts.Color
   Character.Highlight.OutlineTransparency = 0
                end)
+               pcall(function()
+for i,v in pairs(sound69:GetDescendants()) do
+if not v:IsA("DistortionSoundEffect") then
+    v:Destroy()
+end
+               end
+               end)
 		   end
 	   end
    end
