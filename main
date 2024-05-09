@@ -512,7 +512,7 @@ ArtificialHB.Name = "Heartbeat"
 
 script:WaitForChild("Heartbeat")
 
-frame = 1 / 60
+frame = 1 / 120
 tf = 0
 allowframeloss = false
 tossremainder = false
@@ -2642,8 +2642,8 @@ while not stopeverything do
 		   end
 	   end
 	   Torsovelocity = (RootPart.Velocity).Magnitude
-        sine = sine + 1
-		T = T + 1.25
+        sine = sine + .5
+		T = T + 0.625
 	   local sensitivity = 25
 	   if taunt.Value == "FAST BOIII" then
 		   for i,v in pairs(Character.Wings:GetChildren()) do
