@@ -1,3 +1,4 @@
+_G.HIGHFPS = false
 warn([[
              ,--,               
          ,--.          ,---.'|               
@@ -348,7 +349,7 @@ function chatfunc(textt,glitchy)
 		   while not stopeverything do
 			   local hBRUH,sBRUH,vBRUH = Color3.toHSV(GUN.NeonParts.Color)
 			   sayingstuff2.TextColor3 = Color3.fromHSV(hBRUH,sBRUH,vBRUH/2)
-			   swait2()
+			   swait()
 		   end
 	   end))
 	   sayingstuff2.TextStrokeColor3 = shade
@@ -363,7 +364,7 @@ function chatfunc(textt,glitchy)
 	   coroutine.resume(coroutine.create(function()
 		   while not stopeverything do
 			   sayingstuff3.TextColor3 = GUN.NeonParts.Color
-			   swait2()
+			   swait()
 		   end
 	   end))
 	   sayingstuff3.TextStrokeColor3 = shade
@@ -511,13 +512,12 @@ ArtificialHB = Instance.new("BindableEvent",script)
 ArtificialHB.Name = "Heartbeat"
 
 script:WaitForChild("Heartbeat")
-ArtificialHB2 = Instance.new("BindableEvent",script)
-ArtificialHB2.Name = "Heartbeat2"
 
-script:WaitForChild("Heartbeat2")
-
+if _G.HIGHFPS == true then
 frame = 1 / 120
-frame2 = 1 / 60
+else
+frame = 1 / 60
+end
 tf = 0
 allowframeloss = false
 tossremainder = false
@@ -546,28 +546,6 @@ game:GetService("RunService").Heartbeat:Connect(function(s,p)
    end
 end)
 
-game:GetService("RunService").Heartbeat:Connect(function(s,p)
-   tf = tf + s
-   if tf >= frame2 then
-	   if allowframeloss then
-		   script.Heartbeat:Fire()
-		   lastframe = tick()
-	   else
-		   for i = 1,math.floor(tf / frame2) do
-			pcall(function()
-			   script.Heartbeat2:Fire()
-			end)
-		   end
-		   lastframe = tick()
-	   end
-	   if tossremainder then
-		   tf = 0
-	   else
-		   tf = tf - frame2 * math.floor(tf / frame2)
-	   end
-   end
-end)
-
 function swait(num)
    if num == 0 or num == nil then
 	   ArtificialHB.Event:Wait()
@@ -586,15 +564,7 @@ function Swait(num)
 	   end
    end
 end
-function swait2(num)
-   if num == 0 or num == nil then
-	   ArtificialHB2.Event:Wait()
-   else
-	   for i = 0,num do
-		   ArtificialHB2.Event:Wait()
-	   end
-   end
-end
+
 SWAIT = Swait
 
 function CreateConnection(TYPE,PARENT,PART0,PART1,C0,C1)
@@ -916,7 +886,7 @@ end
 coroutine.resume(coroutine.create(function()
    while not stopeverything do
 	   for i = 0,1,(1/60) do
-		   swait2()
+		   swait()
 		   if not alreadyfixing then
 			   GUN.NeonParts.Color = Color3.fromHSV(i,1,1)
 			   if taunt.Value == "iNSaNiTY" then
@@ -934,6 +904,10 @@ coroutine.resume(coroutine.create(function()
 			   elseif taunt.Value == "petfroge" then
 				   GUN.NeonParts.Color = BrickColor.Random().Color
 			   end
+               pcall(function()
+ Character.Highlight.OutlineColor = GUN.NeonParts.Color
+  Character.Highlight.OutlineTransparency = 0
+               end)
 		   end
 	   end
    end
@@ -1821,10 +1795,11 @@ function slash(bonuspeed,rotspeed,rotatingop,typeofshape,type,typeoftrans,pos,sc
    end))
 end
 local correction = false
-local sound69 = Instance.new("Sound",Character)
+local sound69 = Instance.new("Sound",Character.HumanoidRootPart)
 sound69.Looped = true
+sound69.Name = "LC SONG LOL!! GETCUSTOMASSET LOL!! I LOVE GETCUSTOMASSET!! DONT BAN ME PLS!!! "
 sound69.Playing = true
-sound69.Volume = 7.5 
+sound69.Volume = 10
 sound69.SoundId = customasset("NFLC/song69.ogg")
 local dist = Instance.new("DistortionSoundEffect",sound69)
 dist.Level = 0
@@ -1914,6 +1889,7 @@ Mouse.KeyDown:Connect(function(k)
 		   TauntRemote:FireServer("MaddoxLCv3_9",12)
                			  				   sound69:Play()
 			   sound69.SoundId = customasset("NFLC/MLCV39.mp3")
+               dist.Level = .5
 	   elseif songid.Value == "rbxassetid://12" then
 		   TauntRemote:FireServer("Lord",2371543268)
 			   sound69:Play()
@@ -2677,8 +2653,13 @@ while not stopeverything do
 		   end
 	   end
 	   Torsovelocity = (RootPart.Velocity).Magnitude
+       if _G.HIGHFPS == true then
         sine = sine + .5
 		T = T + 0.625
+        else
+  sine = sine + 1
+		T = T + 1.25
+       end
 	   local sensitivity = 25
 	   if taunt.Value == "FAST BOIII" then
 		   for i,v in pairs(Character.Wings:GetChildren()) do
