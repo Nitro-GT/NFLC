@@ -348,7 +348,7 @@ function chatfunc(textt,glitchy)
 		   while not stopeverything do
 			   local hBRUH,sBRUH,vBRUH = Color3.toHSV(GUN.NeonParts.Color)
 			   sayingstuff2.TextColor3 = Color3.fromHSV(hBRUH,sBRUH,vBRUH/2)
-			   swait()
+			   swait2()
 		   end
 	   end))
 	   sayingstuff2.TextStrokeColor3 = shade
@@ -363,7 +363,7 @@ function chatfunc(textt,glitchy)
 	   coroutine.resume(coroutine.create(function()
 		   while not stopeverything do
 			   sayingstuff3.TextColor3 = GUN.NeonParts.Color
-			   swait()
+			   swait2()
 		   end
 	   end))
 	   sayingstuff3.TextStrokeColor3 = shade
@@ -511,8 +511,13 @@ ArtificialHB = Instance.new("BindableEvent",script)
 ArtificialHB.Name = "Heartbeat"
 
 script:WaitForChild("Heartbeat")
+ArtificialHB2 = Instance.new("BindableEvent",script)
+ArtificialHB2.Name = "Heartbeat2"
+
+script:WaitForChild("Heartbeat2")
 
 frame = 1 / 120
+frame2 = 1 / 60
 tf = 0
 allowframeloss = false
 tossremainder = false
@@ -541,6 +546,28 @@ game:GetService("RunService").Heartbeat:Connect(function(s,p)
    end
 end)
 
+game:GetService("RunService").Heartbeat:Connect(function(s,p)
+   tf = tf + s
+   if tf >= frame2 then
+	   if allowframeloss then
+		   script.Heartbeat:Fire()
+		   lastframe = tick()
+	   else
+		   for i = 1,math.floor(tf / frame2) do
+			pcall(function()
+			   script.Heartbeat2:Fire()
+			end)
+		   end
+		   lastframe = tick()
+	   end
+	   if tossremainder then
+		   tf = 0
+	   else
+		   tf = tf - frame2 * math.floor(tf / frame2)
+	   end
+   end
+end)
+
 function swait(num)
    if num == 0 or num == nil then
 	   ArtificialHB.Event:Wait()
@@ -559,7 +586,15 @@ function Swait(num)
 	   end
    end
 end
-
+function swait2(num)
+   if num == 0 or num == nil then
+	   ArtificialHB2.Event:Wait()
+   else
+	   for i = 0,num do
+		   ArtificialHB2.Event:Wait()
+	   end
+   end
+end
 SWAIT = Swait
 
 function CreateConnection(TYPE,PARENT,PART0,PART1,C0,C1)
@@ -881,7 +916,7 @@ end
 coroutine.resume(coroutine.create(function()
    while not stopeverything do
 	   for i = 0,1,(1/60) do
-		   swait()
+		   swait2()
 		   if not alreadyfixing then
 			   GUN.NeonParts.Color = Color3.fromHSV(i,1,1)
 			   if taunt.Value == "iNSaNiTY" then
