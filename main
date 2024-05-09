@@ -1786,7 +1786,7 @@ function slash(bonuspeed,rotspeed,rotatingop,typeofshape,type,typeoftrans,pos,sc
    end))
 end
 local correction = false
-local sound69 = Instance.new("Sound",Character.HumanoidRootPart)
+local sound69 = Instance.new("Sound",Character)
 sound69.Looped = true
 sound69.Playing = true
 sound69.Volume = 7.5 
