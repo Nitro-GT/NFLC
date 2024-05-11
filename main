@@ -181,6 +181,7 @@ end
 function minutes(num)
    return num*60
 end
+
 local lplr = game:GetService("Players").LocalPlayer
 local Player = lplr
 local PLAYER = Player
@@ -232,6 +233,15 @@ for i,v in pairs(GUN:GetChildren()) do
 	   v.Transparency = 1
    end
 end
+local sound69 = Instance.new("Sound",Character.HumanoidRootPart)
+sound69.Looped = true
+sound69.Name = "LC SONG LOL!! GETCUSTOMASSET LOL!! I LOVE GETCUSTOMASSET!! DONT BAN ME PLS!!! "
+sound69.Playing = true
+sound69.Volume = 10
+sound69.SoundId = customasset("NFLC/song69.ogg")
+local dist = Instance.new("DistortionSoundEffect",sound69)
+dist.Level = 0
+local face = Character.Head.face
 GUN.Parent = Character
 local GunJoint = GUN.Joint.Weld
 GUN.Joint.Weld.Part0 = RightArm
@@ -1804,15 +1814,7 @@ function slash(bonuspeed,rotspeed,rotatingop,typeofshape,type,typeoftrans,pos,sc
    end))
 end
 local correction = false
-local sound69 = Instance.new("Sound",Character.HumanoidRootPart)
-sound69.Looped = true
-sound69.Name = "LC SONG LOL!! GETCUSTOMASSET LOL!! I LOVE GETCUSTOMASSET!! DONT BAN ME PLS!!! "
-sound69.Playing = true
-sound69.Volume = 10
-sound69.SoundId = customasset("NFLC/song69.ogg")
-local dist = Instance.new("DistortionSoundEffect",sound69)
-dist.Level = 0
-local face = Character.Head.face
+
 pcall(function()
    if Character[game.Players.LocalPlayer.Name] then
 face =  Character[game.Players.LocalPlayer.Name].Head.face
