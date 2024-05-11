@@ -3361,12 +3361,12 @@ elseif taunt.Value == "MaddoxLCv3_9" then
 			LeftHip.C1 = Clerp(LeftHip.C1,CFrame.new(-0.5,1,0,-4.37113918e-08,-0,-1,0,1,-0,1,0,-4.37113918e-08),1)
 			if attack == false then
 				if Torsovelocity < sensitivity/3.125 then
-				   local headsnap = math.random(1,60);
+					Anim = "Idle"
+			  	 local headsnap = math.random(1,60);
 				   local headsnapping=false;
 				   if headsnap == 1 then
 					   Neck.C0 = Clerp(Neck.C0, NECKC0 * CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(math.random(500,500)), math.rad(math.random(500,500)), math.rad(math.random(500,500))), 1)headsnapping=true headsnapping=false
 				   end
-					Anim = "Idle"
 					RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CFrame.new(0,0,3 - .5 * math.sin(sine/50)) * CFrame.Angles(math.rad(20),math.rad(0),math.rad(0)),0.7/3)
 					Neck.C0 = Clerp(Neck.C0,NECKC0 * CFrame.new(0,0,0) * CFrame.Angles(math.rad(20),math.rad(10*math.cos(sine/100)),math.rad(0)),1)
 					RightShoulder.C0 = Clerp(RightShoulder.C0,CFrame.new(1.5,0.5,0) * CFrame.Angles(math.rad(-199-4*math.sin(sine/50)),math.rad(0),math.rad(10)) * RIGHTSHOULDERC0,0.7/3)
@@ -3376,6 +3376,11 @@ elseif taunt.Value == "MaddoxLCv3_9" then
 			 GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1/2)
             	elseif Torsovelocity >= sensitivity/3.125 then
 					Anim = "Walk"
+				   local headsnap = math.random(1,60);
+				   local headsnapping=false;
+				   if headsnap == 1 then
+					   Neck.C0 = Clerp(Neck.C0, NECKC0 * CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(math.random(500,500)), math.rad(math.random(500,500)), math.rad(math.random(500,500))), 1)headsnapping=true headsnapping=false
+				   end
 					RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CFrame.new(0 - 0.15 * math.cos(sine / 47), -0.5, 0.5 + 0.1 * math.cos(sine / 28)) * CFrame.Angles(math.rad(70), math.rad(0 - RootPart.RotVelocity.Y), math.rad(0 - RootPart.RotVelocity.Y * 4.5 + 3 * math.cos(sine / 47))), .2 / 3)
 					Neck.C0 = Clerp(Neck.C0, NECKC0 * CFrame.new(0, 0, 0 + ((1) - 1)) * CFrame.Angles(math.rad(-17 - 5 * math.cos(sine / 52)), math.rad(0 - 3 * math.cos(sine / 37)), math.rad(0 + 2 * math.cos(sine / 78))), .2 / 3)
 					RightShoulder.C0 = Clerp(RightShoulder.C0, CFrame.new(1.5, 0.5 + 0.05 * math.cos(sine / 28), 0) * CFrame.Angles(math.rad(-8 - 4 * math.cos(sine / 59)), math.rad(-20 + 7 * math.cos(sine / 62)), math.rad(20 + 5 * math.cos(sine / 50)))* RIGHTSHOULDERC0, .2 / 3)
