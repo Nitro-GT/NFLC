@@ -898,7 +898,9 @@ coroutine.resume(coroutine.create(function()
 			   elseif taunt.Value == "Glitch" then
 				   GUN.NeonParts.Color = Color3.fromHSV(i,1,math.clamp((eee.PlaybackLoudness/255)-.5,0,1))
 			   elseif taunt.Value == "Alastor" then
-				   GUN.NeonParts.Color = Color3.new(eee.PlaybackLoudness/500,0,0)
+				   GUN.NeonParts.Color = Color3.new(eee.PlaybackLoudness/20,0,0)
+   elseif taunt.Value == "sis" then
+				   GUN.NeonParts.Color = Color3.new(eee.PlaybackLoudness/15,0,0)
 			   elseif taunt.Value == "kArmA" then
 				   GUN.NeonParts.Color = Color3.new(1,1,1)
 			   elseif taunt.Value == "petfroge" then
