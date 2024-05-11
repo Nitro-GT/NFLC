@@ -3390,7 +3390,7 @@ elseif taunt.Value == "MaddoxLCv3_9" then
 				 GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1/2)
                 end
 			end
-Humanoid.WalkSpeed = walkspeed/3.125
+Humanoid.WalkSpeed = walkspeed/1.25
 	   elseif taunt.Value == "kArmA" then
 		   RootJoint.C1 = Clerp(RootJoint.C1,ROOTC0,.2/3)
 		   Neck.C1 = Clerp(Neck.C1,CFrame.new(0,-.5,0) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(180)),.2/3)
