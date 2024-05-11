@@ -892,15 +892,15 @@ coroutine.resume(coroutine.create(function()
 			   if taunt.Value == "iNSaNiTY" then
 				   GUN.NeonParts.Color = Color3.fromHSV(math.random(0,19)/20,1,1)
 			   elseif taunt.Value == "Err0r" then
-				   GUN.NeonParts.Color = Color3.fromRGB(0,math.clamp(eee.PlaybackLoudness-255,0,255),0)
+				   GUN.NeonParts.Color = Color3.fromRGB(0,math.clamp(sound69.PlaybackLoudness-255,0,255),0)
 			   elseif taunt.Value == "FAST BOIII" then
-				   GUN.NeonParts.Color = Color3.fromRGB(0,0,math.clamp(eee.PlaybackLoudness-191,0,255))
+				   GUN.NeonParts.Color = Color3.fromRGB(0,0,math.clamp(sound69.PlaybackLoudness-191,0,255))
 			   elseif taunt.Value == "Glitch" then
-				   GUN.NeonParts.Color = Color3.fromHSV(i,1,math.clamp((eee.PlaybackLoudness/255)-.5,0,1))
+				   GUN.NeonParts.Color = Color3.fromHSV(i,1,math.clamp((sound69.PlaybackLoudness/255)-.5,0,1))
 			   elseif taunt.Value == "Alastor" then
-				   GUN.NeonParts.Color = Color3.new(eee.PlaybackLoudness/20,0,0)
+				   GUN.NeonParts.Color = Color3.new(sound69.PlaybackLoudness/20,0,0)
    elseif taunt.Value == "sis" then
-				   GUN.NeonParts.Color = Color3.new(eee.PlaybackLoudness/15,0,0)
+				   GUN.NeonParts.Color = Color3.new(sound69.PlaybackLoudness/15,0,0)
 			   elseif taunt.Value == "kArmA" then
 				   GUN.NeonParts.Color = Color3.new(1,1,1)
 			   elseif taunt.Value == "petfroge" then
