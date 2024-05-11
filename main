@@ -1813,7 +1813,7 @@ function slash(bonuspeed,rotspeed,rotatingop,typeofshape,type,typeoftrans,pos,sc
 	   rng:Destroy()
    end))
 end
-local correction = false
+local correction = true
 
 pcall(function()
    if Character[game.Players.LocalPlayer.Name] then
@@ -1837,10 +1837,8 @@ Mouse.KeyDown:Connect(function(k)
 		   TauntRemote:FireServer("None",3247404955)
 		   sound69:Play()
 		   sound69.SoundId = customasset("NFLC/song69.ogg")
-		   correction = false
 	   elseif songid.Value == "rbxassetid://3247404955" then
 		   TauntRemote:FireServer("None",5315171837)
-		   correction = false
 	   elseif songid.Value == "rbxassetid://5315171837" then
 		   TauntRemote:FireServer("Err0r",481104377)
 			   correction = true
@@ -2498,7 +2496,7 @@ coroutine.resume(coroutine.create(function()
    pcall(function()
 while true do
    wait()
-   if correction ==true then
+   if correction == true then
    
 abcdefcor.Enabled = true
 	   VISUALSSz.ExposureCompensation = 0 + sick.PlaybackLoudness/130
