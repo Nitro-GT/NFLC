@@ -20,7 +20,8 @@ Press M to Switch Modes
 Click to Shoot (does nothing)
 Uses Nitro's Oxide Reanim                                                                                                
 ]])
-_G.LightingVis = true
+-- ec4
+_G.LightingVis = false
 _G.Gun = true
 _G.msgbox = false
 _G.ExtraControllerHelp = false -- lets you see where the shot will go if fling is enabled
@@ -915,10 +916,6 @@ coroutine.resume(coroutine.create(function()
 			   elseif taunt.Value == "petfroge" then
 				   GUN.NeonParts.Color = BrickColor.Random().Color
 			   end
-               pcall(function()
- Character.Highlight.OutlineColor = GUN.NeonParts.Color
-  Character.Highlight.OutlineTransparency = 0
-               end)
                pcall(function()
 for i,v in pairs(sound69:GetDescendants()) do
 if not v:IsA("DistortionSoundEffect") then
