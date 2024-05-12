@@ -916,13 +916,6 @@ coroutine.resume(coroutine.create(function()
 			   elseif taunt.Value == "petfroge" then
 				   GUN.NeonParts.Color = BrickColor.Random().Color
 			   end
-               pcall(function()
-for i,v in pairs(sound69:GetDescendants()) do
-if not v:IsA("DistortionSoundEffect") then
-    v:Destroy()
-end
-               end
-               end)
 		   end
 	   end
    end
