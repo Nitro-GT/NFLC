@@ -1,4 +1,4 @@
-_G.HIGHFPS = false
+_G.HIGHFPS = true
 warn([[
              ,--,               
          ,--.          ,---.'|               
