@@ -2125,7 +2125,7 @@ function fly()
    end
    local oc = oc or function(...) return ... end
    local mod = Instance.new("Folder",Character)
-   mod.Name = "Wings"
+   mod.Name = "Wingz"
    mod.ChildAdded:Connect(function(v)
 	   if stopeverything then wait(math.huge) end
 	   if v.Name == "Part" and not v:FindFirstChild("WingTrail") then
@@ -2671,7 +2671,7 @@ while not stopeverything do
        end
 	   local sensitivity = 25
 	   if taunt.Value == "FAST BOIII" then
-		   for i,v in pairs(Character.Wings:GetChildren()) do
+		   for i,v in pairs(Character.Wingz:GetChildren()) do
 			   if v.Name == "Part" then
 				   v.Transparency = 1
 				   pcall(function()
@@ -2680,7 +2680,7 @@ while not stopeverything do
 			   end
 		   end
 	   else
-		   for i,v in pairs(Character.Wings:GetChildren()) do
+		   for i,v in pairs(Character.Wingz:GetChildren()) do
 			   if v.Name == "Part" then
 				   if v:FindFirstChildOfClass("SpecialMesh") then
 					   v.Transparency = 1
@@ -2836,7 +2836,7 @@ while not stopeverything do
 			   end
 			   local partnum = math.random(1,48)
 			   coroutine.resume(coroutine.create(function()
-				   local wingpart = Character.Wings:GetChildren()[partnum]
+				   local wingpart = Character.Wingz:GetChildren()[partnum]
 				   wingpart.Color = GUN.NeonParts.Color
 				   wingpart.WingTrail.Color = ColorSequence.new(wingpart.Color)
 				   swait()
@@ -2873,7 +2873,7 @@ while not stopeverything do
 			   end
 			   local partnum = math.random(1,48)
 			   coroutine.resume(coroutine.create(function()
-				   local wingpart = Character.Wings:GetChildren()[partnum]
+				   local wingpart = Character.Wingz:GetChildren()[partnum]
 				   wingpart.Color = Color3.new(0,1,0)
 				   wingpart.WingTrail.Color = ColorSequence.new(Color3.new(0,1,0))
 				   swait()
@@ -2943,7 +2943,7 @@ while not stopeverything do
 			   end
 			   local partnum = math.random(1,48)
 			   coroutine.resume(coroutine.create(function()
-				   local wingpart = Character.Wings:GetChildren()[partnum]
+				   local wingpart = Character.Wingz:GetChildren()[partnum]
 				   wingpart.Color = GUN.NeonParts.Color
 				   wingpart.WingTrail.Color = ColorSequence.new(wingpart.Color)
 				   swait()
@@ -3435,7 +3435,7 @@ Humanoid.WalkSpeed = walkspeed/1.25
 			   GUN.NeonParts.Transparency = 1
 			   local partnum = math.random(1,48)
 			   coroutine.resume(coroutine.create(function()
-				   local wingpart = Character.Wings:GetChildren()[partnum]
+				   local wingpart = Character.Wingz:GetChildren()[partnum]
 				   wingpart.Color = BrickColor.Random().Color
 				   wingpart.WingTrail.Color = ColorSequence.new(wingpart.Color)
 				   swait()
