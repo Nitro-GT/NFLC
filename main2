@@ -238,7 +238,7 @@ sound69.Looped = true
 sound69.Name = "LC SONG LOL!! GETCUSTOMASSET LOL!! I LOVE GETCUSTOMASSET!! DONT BAN ME PLS!!! "
 sound69.Playing = true
 sound69.Volume = 7.5
-sound69.SoundId = getcustomasset("NFLC/song69.ogg")
+sound69.SoundId = getcustomasset("NFLC/song69.mp3")
 local dist = Instance.new("DistortionSoundEffect",sound69)
 dist.Level = 0
 local face = Character.Head.face
@@ -1835,7 +1835,7 @@ Mouse.KeyDown:Connect(function(k)
 	   if songid.Value == "KNABFAIHFAUIBF" then
 		   TauntRemote:FireServer("None",3247404955)
 		   sound69:Play()
-		   sound69.SoundId = getgetcustomasset("NFLC/song69.ogg")
+		   sound69.SoundId = getgetcustomasset("NFLC/song69.mp3")
 	   elseif songid.Value == "rbxassetid://3247404955" then
 		   TauntRemote:FireServer("None",5315171837)
 	   elseif songid.Value == "rbxassetid://5315171837" then
@@ -1961,7 +1961,7 @@ Mouse.KeyDown:Connect(function(k)
 	   elseif songid.Value == "rbxassetid://654" then
 		   TauntRemote:FireServer("None",3247404955)
 		   sound69:Play()
-			   sound69.SoundId = getgetcustomasset("NFLC/song69.ogg")
+			   sound69.SoundId = getgetcustomasset("NFLC/song69.mp3")
 				   correction = true
                    sound69.PlaybackSpeed = 1
 	   end
