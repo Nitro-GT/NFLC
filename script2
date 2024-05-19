@@ -1435,4 +1435,4 @@ redo2()
 end
 end
 end)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Nitro-GT/NFLC/main/main"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Nitro-GT/NFLC/main/main2"))()
