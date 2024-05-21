@@ -1902,8 +1902,8 @@ Mouse.KeyDown:Connect(function(k)
 		   TauntRemote:FireServer("Lord",2371543268)
 			   sound69:Play()
 		   sound69.SoundId = customasset("NFLC/allgirls.mp3")
-		   dist.Level = 0.75
-			   sound69.PlaybackSpeed = 0.75
+		   dist.Level = 0
+			   sound69.PlaybackSpeed = 1
 		   face.Texture = customasset("NFLC/sadface.png")
 		   elseif songid.Value == "rbxassetid://2371543268" then
 		   TauntRemote:FireServer("MaddoxLC",6768783121)
