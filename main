@@ -1985,6 +1985,8 @@ Mouse.KeyDown:Connect(function(k)
 	   if taunt.Value ~= "Fave" then
 		   TauntRemote:FireServer("Fave",290182215)
            sound69.SoundId = customasset("NFLC/nulled.mp3")
+           sound69:Play()
+           dist.Level = .5
                game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.C1  = CFrameOffsetG
            weld2.C1 = CFrameOffsetG
                game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.Part1  = game.Players.LocalPlayer.Character["HumanoidRootPart"]
@@ -1992,6 +1994,7 @@ Mouse.KeyDown:Connect(function(k)
 	   else
 		   TauntRemote:FireServer("None",3247404955)
              sound69.SoundId = customasset("NFLC/song69.ogg")
+                        dist.Level = 0
            game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.C1  = CFrameOffset
            weld2.C1 = CFrameOffset2
                           game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.Part1  = GUN.Base
