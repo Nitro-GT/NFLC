@@ -1961,10 +1961,9 @@ Mouse.KeyDown:Connect(function(k)
        	   elseif songid.Value == "rbxassetid://654" then
 		   TauntRemote:FireServer("CyberV2",123)
 		   sound69:Play()
-			   sound69.SoundId = customasset("NFLC/CyberV2.ogg")
+			   sound69.SoundId = customasset("NFLC/CyberV2.mp3")
 				   correction = true
                    sound69.PlaybackSpeed = 1
-	   end
 	   elseif songid.Value == "rbxassetid://123" then
 		   TauntRemote:FireServer("None",3247404955)
 		   sound69:Play()
@@ -3368,22 +3367,22 @@ elseif taunt.Value == "MaddoxLCv3_9" then
 				if Torsovelocity < sensitivity then
 					Anim = "Idle"
 					Humanoid.HipHeight = 3
-					RootJoint.C0 = Clerp(RootJoint.C0,rc0 * CFrame.new(0, 0, 0 + 0.25 * math.cos(sine / 12)) * CFrame.Angles(math.rad(4 + 2.5 * math.sin(sine / 12)), math.rad(0), math.rad(0)), 1 / Animation_Speed)
-					Neck.C0 = Clerp(Neck.C0, nc0 * CFrame.new(0, 0, 0 + ((1) - 1)) * CFrame.Angles(math.rad(15 + 4.5 * math.sin(sine / 12)), math.rad(0), math.rad(0 - 4 * math.sin(sine / 12))), 1 / Animation_Speed)
+					RootJoint.C0 = Clerp(RootJoint.C0,rc0 * CFrame.new(0, 0, 0 + 0.25 * math.cos(sine / 12)) * CFrame.Angles(math.rad(4 + 2.5 * math.sin(sine / 12)), math.rad(0), math.rad(0)), 1 / 3)
+					Neck.C0 = Clerp(Neck.C0, nc0 * CFrame.new(0, 0, 0 + ((1) - 1)) * CFrame.Angles(math.rad(15 + 4.5 * math.sin(sine / 12)), math.rad(0), math.rad(0 - 4 * math.sin(sine / 12))), 1 / 3)
 					RightShoulder.C0 = Clerp(RightShoulder.C0,CFrame.new(1.5,0.5,0) * CFrame.Angles(math.rad(-41.6-4*math.sin(sine/50)),math.rad(0),math.rad(0)) * RIGHTSHOULDERC0,0.7/3)
-					LeftShoulder.C0 = Clerp(LeftShoulder.C0, CFrame.new(-1, 0 + 0.025 * math.cos(sine / 12), -1) * CFrame.Angles(math.rad(25), math.rad(0 + 7.5 * math.sin(sine / 12)), math.rad(90 - 7.5 * math.sin(sine / 12))) * lscp, 1 / Animation_Speed)
-					RightHip.C0 = Clerp(RightHip.C0, CFrame.new(1, -1, -0.01) * CFrame.Angles(math.rad(-7.5 * math.sin(sine / 12)), math.rad(75), math.rad(0)) * CFrame.Angles(math.rad(-8 - 2.5 * math.sin(sine / 12)), math.rad(0), math.rad(0)), 1 / Animation_Speed)
-					LeftHip.C0 = Clerp(LeftHip.C0, CFrame.new(-1, -0.5, -0.5) * CFrame.Angles(math.rad(-7.5 * math.sin(sine / 12)), math.rad(-90), math.rad(0)) * CFrame.Angles(math.rad(-8 - 2.5 * math.sin(sine / 12)), math.rad(0), math.rad(0)), 1 / Animation_Speed)
+					LeftShoulder.C0 = Clerp(LeftShoulder.C0, CFrame.new(-1, 0 + 0.025 * math.cos(sine / 12), -1) * CFrame.Angles(math.rad(25), math.rad(0 + 7.5 * math.sin(sine / 12)), math.rad(90 - 7.5 * math.sin(sine / 12))) * lscp, 1 / 3)
+					RightHip.C0 = Clerp(RightHip.C0, CFrame.new(1, -1, -0.01) * CFrame.Angles(math.rad(-7.5 * math.sin(sine / 12)), math.rad(75), math.rad(0)) * CFrame.Angles(math.rad(-8 - 2.5 * math.sin(sine / 12)), math.rad(0), math.rad(0)), 1 / 3)
+					LeftHip.C0 = Clerp(LeftHip.C0, CFrame.new(-1, -0.5, -0.5) * CFrame.Angles(math.rad(-7.5 * math.sin(sine / 12)), math.rad(-90), math.rad(0)) * CFrame.Angles(math.rad(-8 - 2.5 * math.sin(sine / 12)), math.rad(0), math.rad(0)), 1 / 3)
 				 GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1/2)
                 elseif Torsovelocity >= sensitivity then
 					Anim = "Walk"
 					Humanoid.HipHeight = 3
-					RootJoint.C0 = Clerp(RootJoint.C0,rc0 * CFrame.new(0, 0, 0 + 0.25 * math.cos(sine / 12)) * CFrame.Angles(math.rad(15 + 2.5 * math.sin(sine / 12)), math.rad(0), math.rad(2.5 + 2.5 * math.sin(sine / 12))), 1 / Animation_Speed)
-					Neck.C0 = Clerp(Neck.C0, nc0 * CFrame.new(0, 0, 0 + ((1) - 1)) * CFrame.Angles(math.rad(-10 + 4.5 * math.sin(sine / 12)), math.rad(0), math.rad(-2.5 - 2.5 * math.sin(sine / 12))), 1 / Animation_Speed)
+					RootJoint.C0 = Clerp(RootJoint.C0,rc0 * CFrame.new(0, 0, 0 + 0.25 * math.cos(sine / 12)) * CFrame.Angles(math.rad(15 + 2.5 * math.sin(sine / 12)), math.rad(0), math.rad(2.5 + 2.5 * math.sin(sine / 12))), 1 / 3)
+					Neck.C0 = Clerp(Neck.C0, nc0 * CFrame.new(0, 0, 0 + ((1) - 1)) * CFrame.Angles(math.rad(-10 + 4.5 * math.sin(sine / 12)), math.rad(0), math.rad(-2.5 - 2.5 * math.sin(sine / 12))), 1 / 3)
 					RightShoulder.C0 = Clerp(RightShoulder.C0,CFrame.new(1.5,0.5,0) * CFrame.Angles(math.rad(-41.6-4*math.sin(sine/50)),math.rad(0),math.rad(0)) * RIGHTSHOULDERC0,0.7/3)
-					LeftShoulder.C0 = Clerp(LeftShoulder.C0, CFrame.new(-1, 0 + 0.025 * math.cos(sine / 12), -1) * CFrame.Angles(math.rad(25), math.rad(0 + 7.5 * math.sin(sine / 12)), math.rad(90 - 7.5 * math.sin(sine / 12))) * lscp, 1 / Animation_Speed)
-					RightHip.C0 = Clerp(RightHip.C0, CFrame.new(1, -1, -0.01) * CFrame.Angles(math.rad(-25-2.5 * math.sin(sine / 12)), math.rad(75), math.rad(0)) * CFrame.Angles(math.rad(-8 - 5.5 * math.sin(sine / 12)), math.rad(0), math.rad(0)), 1 / Animation_Speed)
-					LeftHip.C0 = Clerp(LeftHip.C0, CFrame.new(-1, -0.5, -0.5) * CFrame.Angles(math.rad(-2.5 * math.sin(sine / 12)), math.rad(-90), math.rad(0)) * CFrame.Angles(math.rad(-8 - 2.5 * math.sin(sine / 12)), math.rad(0), math.rad(0)), 1 / Animation_Speed)
+					LeftShoulder.C0 = Clerp(LeftShoulder.C0, CFrame.new(-1, 0 + 0.025 * math.cos(sine / 12), -1) * CFrame.Angles(math.rad(25), math.rad(0 + 7.5 * math.sin(sine / 12)), math.rad(90 - 7.5 * math.sin(sine / 12))) * lscp, 1 / 3)
+					RightHip.C0 = Clerp(RightHip.C0, CFrame.new(1, -1, -0.01) * CFrame.Angles(math.rad(-25-2.5 * math.sin(sine / 12)), math.rad(75), math.rad(0)) * CFrame.Angles(math.rad(-8 - 5.5 * math.sin(sine / 12)), math.rad(0), math.rad(0)), 1 / 3)
+					LeftHip.C0 = Clerp(LeftHip.C0, CFrame.new(-1, -0.5, -0.5) * CFrame.Angles(math.rad(-2.5 * math.sin(sine / 12)), math.rad(-90), math.rad(0)) * CFrame.Angles(math.rad(-8 - 2.5 * math.sin(sine / 12)), math.rad(0), math.rad(0)), 1 / 3)
 				 GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1/2)
                 end
 			end
