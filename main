@@ -1987,8 +1987,8 @@ Mouse.KeyDown:Connect(function(k)
            sound69.SoundId = customasset("NFLC/nulled.mp3")
                game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.C1  = CFrameOffsetG
            weld2.C1 = CFrameOffsetG
-               game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.Part1  = game.Players.LocalPlayer.Character["Torso"]
-           weld2.Part1  = game.Players.LocalPlayer.Character["Torso"]
+               game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.Part1  = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+           weld2.Part1  = game.Players.LocalPlayer.Character["HumanoidRootPart"]
 	   else
 		   TauntRemote:FireServer("None",3247404955)
              sound69.SoundId = customasset("NFLC/song69.ogg")
@@ -2002,8 +2002,8 @@ Mouse.KeyDown:Connect(function(k)
 		   TauntRemote:FireServer("Krump",1511734302)
               game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.C1  = CFrameOffsetG
            weld2.C1 = CFrameOffsetG
-                         game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.Part1  = game.Players.LocalPlayer.Character["Torso"]
-           weld2.Part1  = game.Players.LocalPlayer.Character["Torso"]
+                         game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.Part1  = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+           weld2.Part1  = game.Players.LocalPlayer.Character["HumanoidRootPart"]
 	   else
 		   TauntRemote:FireServer("None",3247404955)
                game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.C1  = CFrameOffset
@@ -2016,8 +2016,8 @@ Mouse.KeyDown:Connect(function(k)
 		   TauntRemote:FireServer("OOOOO",2681542649)
               game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.C1  = CFrameOffsetG
            weld2.C1 = CFrameOffsetG
-                         game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.Part1  = game.Players.LocalPlayer.Character["Torso"]
-           weld2.Part1  = game.Players.LocalPlayer.Character["Torso"]
+                         game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.Part1  = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+           weld2.Part1  = game.Players.LocalPlayer.Character["HumanoidRootPart"]
 	   else
 		   TauntRemote:FireServer("None",3247404955)
          game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.C1  = CFrameOffset
