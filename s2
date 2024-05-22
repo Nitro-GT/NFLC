@@ -810,10 +810,11 @@ v.Parent.Name = "funnihead"
 end
 end
 end
-
+pcall(function()
 Hat.Rename("rbxassetid://17374768001","","LARM")
 Hat.Rename("rbxassetid://17374768001","","RARM")
 Hat.Rename("rbxassetid://14251599953", "Tor")
+                end)
 local c = game:GetService("Players").LocalPlayer.Character
 pcall(function()
 c.gooblet.Name = "fooblet"
