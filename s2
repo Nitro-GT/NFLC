@@ -1297,11 +1297,24 @@ pcall(function()
        if v:IsA("Accessory") and v.Name == "Heavenly Void Wings" then  
            if c.Humanoid.RigType == Enum.HumanoidRigType.R6 then
                v.Handle.SpecialMesh.MeshId = "rbxassetid://17578463084"
-               v.Handle.SpecialMesh.TextureId = nil
+               v.Handle.SpecialMesh.TextureId = ""
                v.Handle.Color = Color3.fromRGB(0,0,0)
                else
                v.Handle.MeshId = "rbxassetid://17578463084"
-               v.Handle.TextureID = nil
+               v.Handle.TextureID = ""
+               v.Handle.Color = Color3.fromRGB(0,0,0)
+           end
+end
+end
+end)  
+pcall(function()
+          for _,v in pairs(c:GetChildren()) do
+       if v:IsA("Accessory") and v.Name ~= "Accessory (Sinister)" and v.Name ~= "Accessory (VoidRPG)" and v.Name ~= "Accessory (VoidAlligatorJaw)" then  
+           if c.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+               v.Handle.SpecialMesh.TextureId = ""
+               v.Handle.Color = Color3.fromRGB(0,0,0)
+               else
+               v.Handle.TextureID = ""
                v.Handle.Color = Color3.fromRGB(0,0,0)
            end
 end
