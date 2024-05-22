@@ -1304,13 +1304,16 @@ pcall(function()
                v.Handle.TextureID = ""
                v.Handle.Color = Color3.fromRGB(0,0,0)
            end
-           elseif v.Name == "Ultra-Fabulous Hair then
-                          if c.Humanoid.RigType == Enum.HumanoidRigType.R6 then
-               v.Handle.SpecialMesh.MeshId = "rbxassetid://5589314244"
-               v.Handle.SpecialMesh.TextureId = ""
+end
+end
+end)  
+pcall(function()
+          for _,v in pairs(c:GetChildren()) do
+       if v:IsA("Accessory") and v.Name == "Ultra-Fabulous Hair" then  
+           if c.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+               v.Handle.Mesh.TextureId = ""
                v.Handle.Color = Color3.fromRGB(0,0,0)
                else
-               v.Handle.MeshId = "rbxassetid://5589314244"
                v.Handle.TextureID = ""
                v.Handle.Color = Color3.fromRGB(0,0,0)
            end
