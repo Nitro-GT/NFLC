@@ -1337,6 +1337,8 @@ end)
   for _,v in pairs(c:GetChildren()) do
        if v:IsA("Accessory")   then
 v.Handle.CanCollide = false
+v.Handle.Material = Enum.Material.Glass
+v.Handle.Reflectance = -1
            end
  end
 
@@ -1435,4 +1437,4 @@ redo2()
 end
 end
 end)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Nitro-GT/NFLC/main/main2"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Nitro-GT/NFLC/main/main"))()
