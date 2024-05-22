@@ -1853,7 +1853,7 @@ Mouse.KeyDown:Connect(function(k)
 		   sound69.SoundId = customasset("NFLC/song69.ogg")
 	   elseif songid.Value == "rbxassetid://90003" then
 		   TauntRemote:FireServer("None",5315171837)
-	   elseif songid.Value == "rbxassetid://5315171837" then
+	   elseif songid.Value == "rbxassetid://2371543268" then
 		   TauntRemote:FireServer("Err0r",481104377)
 			   correction = true
 			   sound69.SoundId = customasset("NFLC/Err0r.mp3")
@@ -1913,14 +1913,14 @@ Mouse.KeyDown:Connect(function(k)
                			  				   sound69:Play()
 			   sound69.SoundId = customasset("NFLC/MLCV39.mp3")
                dist.Level = .5
-	   elseif songid.Value == "rbxassetid://12" then
+	   elseif songid.Value == "rbxassetid://5315171837" then
 		   TauntRemote:FireServer("Lord",2371543268)
 			   sound69:Play()
 		   sound69.SoundId = customasset("NFLC/allgirls.mp3")
 		   dist.Level = 0
 			   sound69.PlaybackSpeed = 1
 		   face.Texture = customasset("NFLC/sadface.png")
-		   elseif songid.Value == "rbxassetid://2371543268" then
+		   elseif songid.Value == "rbxassetid://12" then
 		   TauntRemote:FireServer("MaddoxLC",6768783121)
 			   sound69:Play()
 		   sound69.SoundId = customasset("NFLC/MaddoxLC.ogg")
