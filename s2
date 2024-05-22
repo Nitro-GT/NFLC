@@ -11,6 +11,7 @@ _G.MiztCompat = true
  local plr =game:GetService("Players").LocalPlayer
 local lastcf = workspace.CurrentCamera.CFrame
 local function redo()
+workspace.FallenPartsDestroyHeight = workspace.FallenPartsDestroyHeight -50
 wait(.1)
 local Hat = {
 Rename = function(HatID, NAME, oname)
@@ -89,7 +90,7 @@ end
 else
 print("richhhh")
 end
-workspace.FallenPartsDestroyHeight = 0/0
+
 
 --game:GetService("Workspace")["Error_30363"].EyesOfTheEverWorld.Name = "Puffer Vest"
 
@@ -164,7 +165,7 @@ coroutine.resume(Network["PartOwnership"]["Enable"])
 end
 
     
-workspace.FallenPartsDestroyHeight = 0/0
+
 
 Connection = workspace.DescendantAdded:Connect(function(c)
     if c.Name == "Animate" then
@@ -211,9 +212,6 @@ end
 c["Body Colors"]:Clone().Parent = char
 game:GetService("Players").LocalPlayer.Character.PrimaryPart = c.Head
 char.HumanoidRootPart.Anchored = false
-if not c:FindFirstChild("Tor") then
-c["ExtraNoobTorso"].Name = "Tor"
-end
 for i,v in pairs(c:GetChildren()) do
 if v:IsA("Accessory") and v.Name == "Pants" then
 v:Destroy()
@@ -419,7 +417,7 @@ local z3 =Instance.new("Humanoid", prt)
 z3.Name="Humanoid"
 z1.Position = Vector3.new(0,9999,0)
 z2.Position = Vector3.new(0,9991,0)
- workspace.FallenPartsDestroyHeight = -1500
+
  function getRoot(char)
 	local rootPart = char:FindFirstChild('HumanoidRootPart') or char:FindFirstChild('Torso')
 	return rootPart
@@ -664,7 +662,7 @@ end)
 
 
 
-		workspace.FallenPartsDestroyHeight = -1000
+
 		settings().Physics.AllowSleep = false
 
 
@@ -762,7 +760,6 @@ end
 else
 end
 
-workspace.FallenPartsDestroyHeight = 0/0
 
 --game:GetService("Workspace")["Error_30363"].EyesOfTheEverWorld.Name = "Puffer Vest"
 
@@ -835,7 +832,7 @@ coroutine.resume(Network["PartOwnership"]["Enable"])
 end
 
     
-workspace.FallenPartsDestroyHeight = 0/0
+
 
 Connection = workspace.DescendantAdded:Connect(function(c)
     if c.Name == "Animate" then
@@ -1102,7 +1099,7 @@ local z3 =Instance.new("Humanoid", prt)
 z3.Name="Humanoid"
 z1.Position = Vector3.new(0,9999,0)
 z2.Position = Vector3.new(0,9991,0)
- workspace.FallenPartsDestroyHeight = -1500
+
 
 task.spawn(function()
   task.wait(.01)
@@ -1301,13 +1298,13 @@ pcall(function()
                v.Handle.SpecialMesh.TextureId = ""
                v.Handle.Color = Color3.fromRGB(0,0,0)
                else
-               v.Handle.MeshId = "rbxassetid://17578463084"
                v.Handle.TextureID = ""
                v.Handle.Color = Color3.fromRGB(0,0,0)
            end
 end
 end
-end)  
+end)
+
 pcall(function()
           for _,v in pairs(c:GetChildren()) do
        if v:IsA("Accessory") and v.Name == "Ultra-Fabulous Hair" then  
@@ -1334,7 +1331,6 @@ pcall(function()
 end
 end
 end)  
-
 
 local connect
 pcall(function()
@@ -1412,7 +1408,7 @@ velocity:Disconnect()
 end)
 
 
-		workspace.FallenPartsDestroyHeight = -1000
+
 		settings().Physics.AllowSleep = false
 
 
