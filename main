@@ -2727,7 +2727,7 @@ while not stopeverything do
     Sine = sine + 1
 		T = T + 1.25
 	   local sensitivity = 25
-	   if taunt.Value == "FAST BOIII" then
+	   if taunt.Value == "FAST BOIII" or taunt.Value == "lcv2lol" then
 		   for i,v in pairs(Character.Wingz:GetChildren()) do
 			   if v.Name == "Part" then
 				   v.Transparency = 1
