@@ -1292,15 +1292,21 @@ if _G.EnableNetLib == true then
         end)
     end
     
-	local function Align3 (Part1, Part0, Position, Angle)
-          
-    game:GetService("RunService").Heartbeat:Connect(function(set)
-	if _G.Fling == false then
-        Part1.CFrame = Part0.CFrame * Position * Angle
-       end
-    
-        end)
-	end
+pcall(function()
+          for _,v in pairs(c:GetChildren()) do
+       if v:IsA("Accessory") and v.Name == "Heavenly Void Wings" then  
+           if c.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+               v.Handle.SpecialMesh.MeshId = "rbxassetid://17578463084"
+               v.Handle.SpecialMesh.TextureId = nil
+               v.Handle.Color = Color3.fromRGB(0,0,0)
+               else
+               v.Handle.MeshId = "rbxassetid://17578463084"
+               v.Handle.TextureID = nil
+               v.Handle.Color = Color3.fromRGB(0,0,0)
+           end
+end
+end
+end)  
 
 
 local connect
@@ -1333,7 +1339,8 @@ v.Handle.CFrame = char[v.Name].Handle.CFrame * CFrame.Angles(0,0,-.0005*math.sin
 v.Handle.CanTouch = false
 end
 end
-end)     
+end)
+   
   for _,v in pairs(c:GetChildren()) do
        if v:IsA("Accessory")   then
 v.Handle.CanCollide = false
