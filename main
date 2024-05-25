@@ -1829,9 +1829,11 @@ end)
 
 
 
-
+if game.Players.LocalPlayer.Name ~= "N1trowo" then
 chatfunc("NFLC - By Nitro")
-
+else
+chatfunc("NFLC - By Nitro (Dev Build)")
+end
 
 local PositionOffset2g = Vector3.new(1.85, 187, 0)
 local RotationOffset2g = Vector3.new(180,0, 135)
