@@ -187,6 +187,7 @@ local lplr = game:GetService("Players").LocalPlayer
 local Player = lplr
 local PLAYER = Player
 local sine = 0
+local Sine = 0
 local LOOPx = 0
 
 local NeckSnap = false
@@ -248,8 +249,6 @@ local face = Character.Head.face
 GUN.Parent = Character
 local GunJoint = GUN.Joint.Weld
 GUN.Joint.Weld.Part0 = RightArm
-if _G.Gun == true then
-game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle:BreakJoints()
 local PositionOffset = Vector3.new(2.025, 1.87, 0)
 local RotationOffset = Vector3.new(180,0, 135)
 RotationOffset = CFrame.Angles(
@@ -262,10 +261,8 @@ local CFrameOffset = CFrame.new(PositionOffset)*RotationOffset
 
 local weld = Instance.new("Weld")
 weld.C1 = CFrameOffset
-weld.Parent = game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle
-weld.Part0 = game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle
+weld.Parent =  GUN.Base
 weld.Part1 = GUN.Base
-game.Players.LocalPlayer.Character["Accessory (VoidAlligatorJaw)"].Handle:BreakJoints()
 local PositionOffset2 = Vector3.new(-1.85, -1.687, 0)
 local RotationOffset2 = Vector3.new(180,0, 135)
 RotationOffset2 = CFrame.Angles(
@@ -278,15 +275,13 @@ local CFrameOffset2 = CFrame.new(PositionOffset2)*RotationOffset2
 
 local weld2 = Instance.new("Weld")
 weld2.C1 = CFrameOffset2
-weld2.Parent = game.Players.LocalPlayer.Character["Accessory (VoidAlligatorJaw)"].Handle
-weld2.Part0 = game.Players.LocalPlayer.Character["Accessory (VoidAlligatorJaw)"].Handle
+weld2.Parent =  GUN.Base
+weld2.Part0 =  GUN.Base
 weld2.Part1 = GUN.Base
 
 
 
-else
-   print("")
-end
+
 
 local Hole = GUN.Hole
 local Holetwo = GUN.Hole2
@@ -914,6 +909,10 @@ coroutine.resume(coroutine.create(function()
    elseif taunt.Value == "sis" then
 				   GUN.NeonParts.Color = Color3.new(sound69.PlaybackLoudness/15,0,0)
 			   elseif taunt.Value == "kArmA" then
+				   GUN.NeonParts.Color = Color3.new(1,1,1)
+		   elseif taunt.Value == "Lord" then
+				   GUN.NeonParts.Color = Color3.new(1,1,1)
+		   elseif taunt.Value == "lcv2lol" then
 				   GUN.NeonParts.Color = Color3.new(1,1,1)
 			   elseif taunt.Value == "petfroge" then
 				   GUN.NeonParts.Color = BrickColor.Random().Color
@@ -1827,9 +1826,21 @@ end)
 
 
 
-
+if game.Players.LocalPlayer.Name ~= "N1trowo" then
 chatfunc("NFLC - By Nitro")
+else
+chatfunc("NFLC - By Nitro (Dev Build)")
+end
 
+local PositionOffset2g = Vector3.new(1.85, 187, 0)
+local RotationOffset2g = Vector3.new(180,0, 135)
+RotationOffset2g = CFrame.Angles(
+   math.rad(RotationOffset2.X),
+   math.rad(RotationOffset2.Y),
+   math.rad(RotationOffset2.Z)
+)
+
+local CFrameOffsetG = CFrame.new(PositionOffset2g)*RotationOffset2g
 
 Mouse.KeyDown:Connect(function(k)
    if stopeverything then wait(math.huge) end
@@ -1839,9 +1850,9 @@ Mouse.KeyDown:Connect(function(k)
 		   TauntRemote:FireServer("None",3247404955)
 		   sound69:Play()
 		   sound69.SoundId = customasset("NFLC/song69.ogg")
-	   elseif songid.Value == "rbxassetid://3247404955" then
+	   elseif songid.Value == "rbxassetid://90003" then
 		   TauntRemote:FireServer("None",5315171837)
-	   elseif songid.Value == "rbxassetid://5315171837" then
+	   elseif songid.Value == "rbxassetid://2371543268" then
 		   TauntRemote:FireServer("Err0r",481104377)
 			   correction = true
 			   sound69.SoundId = customasset("NFLC/Err0r.mp3")
@@ -1901,14 +1912,14 @@ Mouse.KeyDown:Connect(function(k)
                			  				   sound69:Play()
 			   sound69.SoundId = customasset("NFLC/MLCV39.mp3")
                dist.Level = .5
-	   elseif songid.Value == "rbxassetid://12" then
+	   elseif songid.Value == "rbxassetid://5315171837" then
 		   TauntRemote:FireServer("Lord",2371543268)
 			   sound69:Play()
 		   sound69.SoundId = customasset("NFLC/allgirls.mp3")
 		   dist.Level = 0
 			   sound69.PlaybackSpeed = 1
 		   face.Texture = customasset("NFLC/sadface.png")
-		   elseif songid.Value == "rbxassetid://2371543268" then
+		   elseif songid.Value == "rbxassetid://12" then
 		   TauntRemote:FireServer("MaddoxLC",6768783121)
 			   sound69:Play()
 		   sound69.SoundId = customasset("NFLC/MaddoxLC.ogg")
@@ -1967,6 +1978,18 @@ Mouse.KeyDown:Connect(function(k)
 			   sound69.SoundId = customasset("NFLC/CyberV2.mp3")
 				   correction = true
                    sound69.PlaybackSpeed = 1
+       	   elseif songid.Value == "rbxassetid://3247404955" then
+		   TauntRemote:FireServer("lcv2lol",5315171837)
+		   sound69:Play()
+			   sound69.SoundId = customasset("NFLC/V2.mp3")
+				   correction = true
+                   sound69.PlaybackSpeed = 1
+                          	   elseif songid.Value == "rbxassetid://9000" then
+		   TauntRemote:FireServer("lcv2lol2",333)
+		   sound69:Play()
+			   sound69.SoundId = customasset("NFLC/song69.ogg")
+				   correction = true
+                   sound69.PlaybackSpeed = 1
 	   elseif songid.Value == "rbxassetid://123" then
 		   TauntRemote:FireServer("None",3247404955)
 		   sound69:Play()
@@ -1978,21 +2001,48 @@ Mouse.KeyDown:Connect(function(k)
 	   if taunt.Value ~= "Fave" then
 		   TauntRemote:FireServer("Fave",290182215)
            sound69.SoundId = customasset("NFLC/nulled.mp3")
+           sound69:Play()
+           dist.Level = .5
+               game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.C1  = CFrameOffsetG
+           weld2.C1 = CFrameOffsetG
+               game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.Part1  = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+           weld2.Part1  = game.Players.LocalPlayer.Character["HumanoidRootPart"]
 	   else
 		   TauntRemote:FireServer("None",3247404955)
              sound69.SoundId = customasset("NFLC/song69.ogg")
+                        dist.Level = 0
+           game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.C1  = CFrameOffset
+           weld2.C1 = CFrameOffset2
+                          game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.Part1  = GUN.Base
+           weld2.Part1  = GUN.Base
 	   end
    elseif k == "t" then
 	   if taunt.Value ~= "Krump" then
 		   TauntRemote:FireServer("Krump",1511734302)
+              game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.C1  = CFrameOffsetG
+           weld2.C1 = CFrameOffsetG
+                         game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.Part1  = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+           weld2.Part1  = game.Players.LocalPlayer.Character["HumanoidRootPart"]
 	   else
 		   TauntRemote:FireServer("None",3247404955)
+               game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.C1  = CFrameOffset
+           weld2.C1 = CFrameOffset2
+                                     game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.Part1  = GUN.Base
+           weld2.Part1  = GUN.Base
 	   end
    elseif k == "u" then
 	   if taunt.Value ~= "OOOOO" then
 		   TauntRemote:FireServer("OOOOO",2681542649)
+              game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.C1  = CFrameOffsetG
+           weld2.C1 = CFrameOffsetG
+                         game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.Part1  = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+           weld2.Part1  = game.Players.LocalPlayer.Character["HumanoidRootPart"]
 	   else
 		   TauntRemote:FireServer("None",3247404955)
+         game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.C1  = CFrameOffset
+           weld2.C1 = CFrameOffset2
+                                     game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.Part1  = GUN.Base
+           weld2.Part1  = GUN.Base
 	   end
    elseif k == "f" then
 	   ISFLYING = not ISFLYING
@@ -2673,9 +2723,10 @@ while not stopeverything do
 	   end
 	   Torsovelocity = (RootPart.Velocity).Magnitude
   sine = sine + 1
+    Sine = sine + 1
 		T = T + 1.25
 	   local sensitivity = 25
-	   if taunt.Value == "FAST BOIII" then
+	   if taunt.Value == "FAST BOIII" or taunt.Value == "lcv2lol" then
 		   for i,v in pairs(Character.Wingz:GetChildren()) do
 			   if v.Name == "Part" then
 				   v.Transparency = 1
@@ -3007,6 +3058,65 @@ while not stopeverything do
 			   GUN.GunAdditions.Transparency = 1
 			   GUN.NeonParts.Transparency = 1
 		   end
+	   elseif taunt.Value == "lcv2lol" then
+		   RootJoint.C1 = Clerp(RootJoint.C1,ROOTC0 * CFrame.new(0,0,0),0.2/3)
+		   Neck.C1 = Clerp(Neck.C1,CFrame.new(0,-0.5,0) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(180)),0.2/3)
+		   RightHip.C1 = Clerp(RightHip.C1,CFrame.new(0.5,1,0,-4.37113918e-08,0,1,0,1,0,-1,0,-4.37113918e-08),1)
+		   LeftHip.C1 = Clerp(LeftHip.C1,CFrame.new(-0.5,1,0,-4.37113918e-08,-0,-1,0,1,-0,1,0,-4.37113918e-08),1)
+		   if attack == false then
+			   if Torsovelocity < sensitivity/3.125 then
+				   Anim = "Idle"
+                   				   Humanoid.HipHeight = 2
+				GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-120+5*math.cos(sine/12)),math.rad(0),math.rad(0)),1/2)
+				RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0*CFrame.new(0,0,0 - .5 * math.sin(sine/12))*CFrame.Angles(math.rad(-25-5*math.cos(sine/12)),0,0),.7/3)
+				Neck.C0 = Clerp(Neck.C0,NECKC0*CFrame.new(0,0 ,0 + ((1) - 1)) * CFrame.Angles(math.rad(30-1*math.cos(sine/12)),math.rad(0),math.rad(0)),0.7/3)
+				RightShoulder.C0 = Clerp(RightShoulder.C0,CFrame.new(1.55, 0.5, 0.5) * CFrame.Angles(math.rad(250), math.rad(20), math.rad(-80))* RIGHTSHOULDERC0, 1 / 3)
+				LeftShoulder.C0 = Clerp(LeftShoulder.C0,CFrame.new(-1.5,0.5,0) * CFrame.Angles(math.rad(-20 + 8.5 * math.cos(sine/12)),math.rad(0),math.rad(-25 - 5 * math.cos(sine/12))) * LEFTSHOULDERC0,0.7/3)
+				RightHip.C0 = Clerp(RightHip.C0,CFrame.new(1,-0.5,-0.5) * CFrame.Angles(math.rad(-5 + 9 * math.cos(sine/12)),math.rad(80),math.rad(0)),0.7/3)
+				LeftHip.C0 = Clerp(LeftHip.C0,CFrame.new(-1,-1,0) * CFrame.Angles(math.rad(13 + 9 * math.cos(sine/12)),math.rad(-80),math.rad(0)),0.7/3)
+			   elseif Torsovelocity >= sensitivity/3.125 then
+				   Anim = "Walk"
+                   				   Humanoid.HipHeight = 2
+				GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1/2)
+				RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0*CFrame.new(0,0,0 - .5 * math.sin(sine/12))*CFrame.Angles(math.rad(40-1*math.cos(sine/12)),0,0),.25)
+				Neck.C0 = Clerp(Neck.C0,NECKC0*CFrame.new(0,-.25,0)*CFrame.Angles(math.rad(-40),0,0),.25)
+				RightShoulder.C0 = Clerp(RightShoulder.C0, CFrame.new(1.55, 0.5, 0.5) * CFrame.Angles(math.rad(250), math.rad(20), math.rad(-80))* RIGHTSHOULDERC0, 1 / 3)
+				LeftShoulder.C0 = Clerp(LeftShoulder.C0,CFrame.new(-1.5,.5,0)*CFrame.Angles(math.rad(-45),0,math.rad(-5-2*math.cos(sine/19)))*LEFTSHOULDERC0,.25)
+				RightHip.C0 = Clerp(RightHip.C0,CFrame.new(1,-0.5,-0.5) * CFrame.Angles(math.rad(-5 + 9 * math.cos(sine/12)),math.rad(80),math.rad(0)),0.7/3)
+				LeftHip.C0 = Clerp(LeftHip.C0,CFrame.new(-1,-1,0) * CFrame.Angles(math.rad(-9 + 9 * math.cos(sine/12)),math.rad(-80),math.rad(0)),0.7/3)
+			   end
+			   GUN.Base.Transparency = 1
+			   GUN.GunAdditions.Transparency = 1
+			   GUN.NeonParts.Transparency = 1
+		   end
+           elseif taunt.Value == "lcv2lol2" then
+		   if attack == false then
+			   if Torsovelocity < sensitivity/3.125 then
+				   Anim = "Idle"
+                   				   Humanoid.HipHeight = 1
+							LeftShoulder.C0 = Clerp(LeftShoulder.C0,CFrame.new(-1.5,.5,0)*CFrame.Angles(math.rad(20),0,math.rad(-10))*Defaults.LeftShoulder.C0,.25)
+				RootJoint.C0 = Clerp(RootJoint.C0,Defaults.RootJoint.C0*CFrame.new(0,0,-.5*math.sin(Sine/50))*CFrame.Angles(math.rad(20),0,0),.25)
+				Neck.C0 = Clerp(Neck.C0,Defaults.Neck.C0 * CFrame.new(0,0 ,0 + ((1) - 1)) * CFrame.Angles(math.rad(-50+math.random(-1,1)),math.rad(-30+math.random(-1,1)),math.rad(0+math.random(-1,1))),0.7/3)
+				RightShoulder.C0 = Clerp(RightShoulder.C0,CFrame.new(1.5,0.5,0) * CFrame.Angles(math.rad(135 + 8.5 * math.cos(Sine/15)),math.rad(-15),math.rad(25)) * RIGHTSHOULDERC0,0.7/3)
+				Neck.C0 = Clerp(Neck.C0,Defaults.Neck.C0*CFrame.new(0,0 ,0 + ((1) - 1)) * CFrame.Angles(math.rad(30+5*math.sin(Sine/50)),math.rad(0),math.rad(0)),0.7/3)
+				RightHip.C0 = Clerp(RightHip.C0,CFrame.new(1,-1,-.01)*CFrame.Angles(math.rad(10),math.rad(80),math.rad(10*math.sin(Sine/50))),.25)
+				LeftHip.C0 = Clerp(LeftHip.C0,CFrame.new(-1,-1,-.01)*CFrame.Angles(math.rad(20),math.rad(-80),math.rad(-10*math.sin(Sine/50))),.25)
+				GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-90+math.random(-1,1)),math.rad(0+math.random(-1,1)),math.rad(0+math.random(-1,1))),1/2)
+			   elseif Torsovelocity >= sensitivity/3.125 then
+				   Anim = "Walk"
+                   				   Humanoid.HipHeight = 1
+				RootJoint.C0 = Clerp(RootJoint.C0,Defaults.RootJoint.C0*CFrame.new(0,.125*math.sin(Sine/12),0)*CFrame.Angles(math.rad(10-5*math.cos(Sine/12)),math.rad(-10*math.cos(Sine/12)),math.rad(-5*math.cos(Sine/12))),.25)
+				Neck.C0 = Clerp(Neck.C0,Defaults.Neck.C0*CFrame.Angles(math.rad(10-5*math.cos(Sine/12)),math.rad(10*math.cos(Sine/12)),math.rad(5*math.cos(Sine/12))),.25)
+				RightShoulder.C0 = Clerp(RightShoulder.C0,CFrame.new(1.5,.5+.2*math.sin(Sine/12),-.25)*CFrame.Angles(math.rad(165-15*math.cos(Sine/12)),math.rad(-10+5*math.sin(Sine/12)),math.rad(10))*Defaults.RightShoulder.C0,.25)
+				LeftShoulder.C0 = Clerp(LeftShoulder.C0,CFrame.new(-1.5,.5-.15*math.cos(Sine/12),.5*math.sin(Sine/12))*CFrame.Angles(math.rad(-30*math.sin(Sine/12)),math.rad(5*math.cos(Sine/12)),0)*Defaults.LeftShoulder.C0,.25)
+				RightHip.C0 = Clerp(RightHip.C0,CFrame.new(1,-.9-.2*math.cos(Sine/12),.5*math.sin(Sine/12))*CFrame.Angles(math.rad(-10-40*math.sin(Sine/12)),math.rad(90+5*math.cos(Sine/12)),math.rad(2.5*math.cos(Sine/12))),.25)
+				LeftHip.C0 = Clerp(LeftHip.C0,CFrame.new(-1,-.9+.2*math.cos(Sine/12),-.5*math.sin(Sine/12))*CFrame.Angles(math.rad(-10+40*math.sin(Sine/12)),math.rad(-90+5*math.cos(Sine/12)),math.rad(2.5*math.cos(Sine/12))),.25)
+				GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15)*CFrame.Angles(math.rad(-90),0,0),.25)
+			   end
+			   GUN.Base.Transparency = 1
+			   GUN.GunAdditions.Transparency = 1
+			   GUN.NeonParts.Transparency = 1
+		   end
 	   elseif taunt.Value == "HoneyLC" then
 		   RootJoint.C1 = Clerp(RootJoint.C1,ROOTC0 * CFrame.new(0,0,0),0.2/3)
 		   Neck.C1 = Clerp(Neck.C1,CFrame.new(0,-0.5,0) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(180)),0.2/3)
@@ -3150,7 +3260,7 @@ while not stopeverything do
 			   GUN.NeonParts.Transparency = 1
 		   end
 	   elseif taunt.Value == "caverns" then
-		   local Sine = 0
+		   local sine = 0
 		   RootJoint.C1 = Clerp(RootJoint.C1,ROOTC0,.2/3)
 		   Neck.C1 = Clerp(Neck.C1,CFrame.new(0,-.5,0) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(180)),.2/3)
 		   RightHip.C1 = Clerp(RightHip.C1,CFrame.new(.5,1,0,-4.37113918e-08,0,1,0,1,0,-1,0,-4.37113918e-08),1)
@@ -3169,9 +3279,9 @@ while not stopeverything do
 					   Neck.C0 = Clerp(Neck.C0, NECKC0 * CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(math.random(500,500)), math.rad(math.random(500,500)), math.rad(math.random(500,500))), 1)headsnapping=true headsnapping=false
 				   end
 				   RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CFrame.new(0, 0, 0 + 0.05 * math.cos(sine / 12)) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(-0)), 1 / 3)
-				   Neck.C0 = Clerp(Neck.C0,NECKC0 * CFrame.new(0, 0, 0 + ((1) - 1)) *CFrame.Angles(math.rad(20 - 2.5 * math.sin(Sine / 12)), math.rad(0), math.rad(30 *math.cos(sine/12))), 1 / 3)
+				   Neck.C0 = Clerp(Neck.C0,NECKC0 * CFrame.new(0, 0, 0 + ((1) - 1)) *CFrame.Angles(math.rad(20 - 2.5 * math.sin(sine / 12)), math.rad(0), math.rad(30 *math.cos(sine/12))), 1 / 3)
 				   RightShoulder.C0 = Clerp(RightShoulder.C0, CFrame.new(1.55, 0.5, 0.5) * CFrame.Angles(math.rad(250), math.rad(20), math.rad(-80))* RIGHTSHOULDERC0, 1 / 3)
-				   LeftShoulder.C0 = Clerp(LeftShoulder.C0,CFrame.new(-1.5,0.5,0) * CFrame.Angles(math.rad(20),math.rad(0),math.rad(-10-10*math.sin(Sine/50))) * LEFTSHOULDERC0,0.7/3)
+				   LeftShoulder.C0 = Clerp(LeftShoulder.C0,CFrame.new(-1.5,0.5,0) * CFrame.Angles(math.rad(20),math.rad(0),math.rad(-10-10*math.sin(sine/50))) * LEFTSHOULDERC0,0.7/3)
 				   RightHip.C0 = Clerp(RightHip.C0, CFrame.new(1, -1 - 0.05 * math.cos(sine / 12), -0.01) * CFrame.Angles(math.rad(0), math.rad(90), math.rad(0)) * CFrame.Angles(math.rad(-8), math.rad(0), math.rad(0)), 1 / 3)
 				   LeftHip.C0 = Clerp(LeftHip.C0, CFrame.new(-1, -1 - 0.05 * math.cos(sine / 12), -0.01) * CFrame.Angles(math.rad(0), math.rad(-90), math.rad(0)) * CFrame.Angles(math.rad(-8), math.rad(0), math.rad(0)), 1 / 3)
 				   GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-106.3-.9*math.cos(sine/12)),math.rad(0),math.rad(0)),1 / 2)
@@ -3421,6 +3531,7 @@ if Torsovelocity < sensitivity then
 				   GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1/2)
 				end
 			end
+
 Humanoid.WalkSpeed = walkspeed/1.25
 	   elseif taunt.Value == "kArmA" then
 		   RootJoint.C1 = Clerp(RootJoint.C1,ROOTC0,.2/3)
@@ -3491,6 +3602,7 @@ Humanoid.WalkSpeed = walkspeed/1.25
 				   wwpart.Name = randomstring()
 				   wwpart.Parent = ww
 			   end
+
 			   ww.Parent = Character
 			   coroutine.resume(coroutine.create(function()
 				   repeat if stopeverything then wait(math.huge) end 
