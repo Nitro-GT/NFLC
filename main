@@ -1858,6 +1858,7 @@ Mouse.KeyDown:Connect(function(k)
 	   elseif songid.Value == "rbxassetid://2371543268" then
 		   TauntRemote:FireServer("Err0r",481104377)
 			   correction = true
+		   sound69:Play()
 			   sound69.SoundId = customasset("NFLC/Err0r.mp3")
 	   elseif songid.Value == "rbxassetid://481104377" then
 		   TauntRemote:FireServer("FAST BOIII",2920078671)
