@@ -245,7 +245,6 @@ sound69.Volume = 7.5
 sound69.SoundId = customasset("NFLC/song69.ogg")
 local dist = Instance.new("DistortionSoundEffect",sound69)
 dist.Level = 0
-local face = Character.Head.face
 GUN.Parent = Character
 local GunJoint = GUN.Joint.Weld
 GUN.Joint.Weld.Part0 = RightArm
@@ -1819,12 +1818,7 @@ function slash(bonuspeed,rotspeed,rotatingop,typeofshape,type,typeoftrans,pos,sc
 end
 local correction = true
 
-pcall(function()
-   if Character[game.Players.LocalPlayer.Name] then
-face =  Character[game.Players.LocalPlayer.Name].Head.face
-end
-end)
-   local oldtexture = face.Texture
+
    local UserInputService = game:GetService("UserInputService")
 
 
@@ -1908,7 +1902,6 @@ Mouse.KeyDown:Connect(function(k)
 	   elseif songid.Value == "rbxassetid://5089636816" then
 		   TauntRemote:FireServer("hi",4835535512)
 			   sound69:Play()
-			oldtexture = face.Texture
 		   sound69.SoundId = customasset("NFLC/BloodWater.mp3")
 			   correction = true
                	   elseif songid.Value == "rbxassetid://4835535512" then
@@ -1922,7 +1915,6 @@ Mouse.KeyDown:Connect(function(k)
 		   sound69.SoundId = customasset("NFLC/allgirls.mp3")
 		   dist.Level = 0
 			   sound69.PlaybackSpeed = 1
-		   face.Texture = customasset("NFLC/sadface.png")
 		   elseif songid.Value == "rbxassetid://12" then
 		   TauntRemote:FireServer("MaddoxLC",6768783121)
 			   sound69:Play()
@@ -1939,7 +1931,6 @@ Mouse.KeyDown:Connect(function(k)
 	   elseif songid.Value == "rbxassetid://6190635423" then
 		   TauntRemote:FireServer("SolidLC",348832364)
 		   sound69:Play()
-		   face.Texture = oldtexture
 			   dist.Level = 0
 			   sound69.SoundId = customasset("NFLC/solidlc.mp3")
 				   correction = true
