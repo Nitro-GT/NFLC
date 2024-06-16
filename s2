@@ -1,5 +1,5 @@
 _G.HideCharacter = true
-_G.DaHood = false
+_G.NewVelocity = false
 --[[ 
 THIS WAS MADE BY NITRO (tixbot)
 Oxide Black - oxide reanim but black lol
@@ -139,10 +139,11 @@ v.Parent.Name = "funnihead"
 end
 end
 end
-
+pcall(function()
 Hat.Rename("rbxassetid://17374768001","","LARM")
 Hat.Rename("rbxassetid://17374768001","","RARM")
 Hat.Rename("rbxassetid://14251599953", "Tor")
+end)
 local c = game:GetService("Players").LocalPlayer.Character
 pcall(function()
 c.gooblet.Name = "fooblet"
@@ -232,7 +233,7 @@ local swordbigvel = false
 velocity = game:GetService("RunService").Heartbeat:Connect(function(set)
 for i,v in pairs(c:GetChildren()) do
 	if v:IsA("Accessory")  then
-		v.Handle.AssemblyLinearVelocity = Vector3.new(char.Torso.AssemblyLinearVelocity.X*25, -26.65, char.Torso.AssemblyLinearVelocity*25)
+		v.Handle.AssemblyLinearVelocity = Vector3.new(char.Torso.AssemblyLinearVelocity.X*25, 25.01, char.Torso.AssemblyLinearVelocity*25)
 	end
 end
 end)
@@ -685,7 +686,7 @@ for _, child in pairs(c:GetChildren()) do
 
 end
 local function redo2()
-wait(.02)
+--wait(.005)
 local Hat = {
 Rename = function(HatID, NAME, oname)
 if oname == nil then oname = "Hat" end
@@ -824,6 +825,11 @@ pcall(function()
 Hat.Rename("rbxassetid://14255543546","","LARM")
 Hat.Rename("rbxassetid://14255543546","","RARM")
 end)
+pcall(function()
+Hat.Rename("rbxassetid://14768664565", "Tor")
+Hat.Rename("rbxassetid://14768683674","","LARM")
+Hat.Rename("rbxassetid://14768683674","","RARM")
+end)
 local c = game:GetService("Players").LocalPlayer.Character
 _G.OxideRealChar = c
 pcall(function()
@@ -926,11 +932,15 @@ end
         else
 rootPart.CFrame = CFrame.new(char.HumanoidRootPart.CFrame.X + 15  ,char.HumanoidRootPart.CFrame.Y - 100,char.HumanoidRootPart.CFrame.Z +15 ) 
         end
-
+setsimulationradius(1000)
 velocity = game:GetService("RunService").Heartbeat:Connect(function(set)
 for i,v in pairs(c:GetChildren()) do
 	if v:IsA("Accessory")  then
+        if _G.NewVelocity == true then
 		v.Handle.AssemblyLinearVelocity = Vector3.new(char.Torso.AssemblyLinearVelocity.X*25, 25.01, char.Torso.AssemblyLinearVelocity*25)
+        else
+v.Handle.AssemblyLinearVelocity = Vector3.new(char.Torso.AssemblyLinearVelocity.X*25, -26.65, char.Torso.AssemblyLinearVelocity*25)
+        end
 	end
 end
 end)
@@ -1359,6 +1369,7 @@ pcall(function()
  	   connect = game:GetService("RunService").Heartbeat:Connect(function(set)
  workspace.CurrentCamera.CameraSubject = workspace.non:FindFirstChildOfClass("Humanoid")
         lastcf = workspace.CurrentCamera.CFrame
+
          	    pcall(function()
  c["Tor"].Handle.CFrame = char["Torso"].CFrame *CFrame.new(0,0,0)  * CFrame.Angles(0,0,-.0005*math.sin(100*tick())) *CFrame.new(-.0025*math.sin(100*tick()),-.0025*math.sin(100*tick()),-.0025*math.sin(100*tick()))
 end)
@@ -1427,7 +1438,7 @@ spawn(function()
 end)
 
 spamRequests = false
-wait(game:GetService("Players").RespawnTime)
+wait(game:GetService("Players").RespawnTime +.1)
 connect:Disconnect()
 char:Destroy()
 velocity:Disconnect()
@@ -1470,14 +1481,14 @@ workspace.CurrentCamera.CameraSubject = workspace.non:FindFirstChildOfClass("Hum
 if plr.Character.Name ~= "non" then
  plr.Character.HumanoidRootPart.CFrame = CFrame.new( workspace.non.HumanoidRootPart.CFrame.X +5 , workspace.non.HumanoidRootPart.CFrame.Y, workspace.non.HumanoidRootPart.CFrame.Z +5) 
 end
-task.wait(.01)
+task.wait(.005)
 redo2()
 else
 workspace.CurrentCamera.CameraSubject = workspace.Terrain.non:FindFirstChildOfClass("Humanoid")
 if plr.Character.Name ~= "non" then
  plr.Character.HumanoidRootPart.CFrame = CFrame.new( workspace.Terrain.non.HumanoidRootPart.CFrame.X +5 , workspace.Terrain.non.HumanoidRootPart.CFrame.Y, workspace.Terrain.non.HumanoidRootPart.CFrame.Z +5) 
 end
-task.wait(.01)
+task.wait(.005)
 redo2()
     end
 end
@@ -1488,9 +1499,10 @@ if plr.Character.Name ~= "non" then
 end
 --print("mmm, this is running properly!")
 workspace.CurrentCamera.CameraSubject = workspace.non:FindFirstChildOfClass("Humanoid")
-task.wait(.01)
+--task.wait(.0025)
 redo2()
 end
 end
 end)
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Nitro-GT/NFLC/main/main"))()
