@@ -3061,7 +3061,7 @@ while not stopeverything do
 		   if attack == false then
 			   if Torsovelocity < sensitivity/3.125 then
 				   Anim = "Idle"
-                   				   Humanoid.HipHeight = 2
+                   				   Humanoid.HipHeight = 3
 				GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-120+5*math.cos(sine/12)),math.rad(0),math.rad(0)),1/2)
 				RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0*CFrame.new(0,0,0 - .5 * math.sin(sine/12))*CFrame.Angles(math.rad(-25-5*math.cos(sine/12)),0,0),.7/3)
 				Neck.C0 = Clerp(Neck.C0,NECKC0*CFrame.new(0,0 ,0 + ((1) - 1)) * CFrame.Angles(math.rad(30-1*math.cos(sine/12)),math.rad(0),math.rad(0)),0.7/3)
