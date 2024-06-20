@@ -3058,6 +3058,7 @@ while not stopeverything do
 		   Neck.C1 = Clerp(Neck.C1,CFrame.new(0,-0.5,0) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(180)),0.2/3)
 		   RightHip.C1 = Clerp(RightHip.C1,CFrame.new(0.5,1,0,-4.37113918e-08,0,1,0,1,0,-1,0,-4.37113918e-08),1)
 		   LeftHip.C1 = Clerp(LeftHip.C1,CFrame.new(-0.5,1,0,-4.37113918e-08,-0,-1,0,1,-0,1,0,-4.37113918e-08),1)
+	   Humanoid.HipHeight = 3
 		   if attack == false then
 			   if Torsovelocity < sensitivity/3.125 then
 				   Anim = "Idle"
