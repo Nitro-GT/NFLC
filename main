@@ -853,6 +853,8 @@ coroutine.resume(coroutine.create(function()
 				   GUN.NeonParts.Color = Color3.new(1,1,1)
                      elseif taunt.Value == "lcv2lol2" then
 				   GUN.NeonParts.Color = Color3.new(1,1,1)
+      elseif taunt.Value == "lcv2lol3" then
+				   GUN.NeonParts.Color = Color3.new(1,1,1)
 			   elseif taunt.Value == "petfroge" then
 				   GUN.NeonParts.Color = BrickColor.Random().Color
 			   end
