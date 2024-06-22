@@ -2045,17 +2045,19 @@ coroutine.wrap(function()
 end)()
 antivoid = Instance.new("Part")
 antivoid.Name = randomstring()
+antivoid.CanCollide = false
 antivoid.Size = Vector3.new(2048,10,2048)
 antivoid.Anchored = true
+antivoid.CanTouch = true
 antivoid.Transparency = 1
-antivoid.Position = Vector3.new(RootPart.Position.X,workspace.FallenPartsDestroyHeight+50,RootPart.Position.Z)
+antivoid.Position = Vector3.new(RootPart.Position.X,workspace.FallenPartsDestroyHeight+100,RootPart.Position.Z)
 antivoid.Parent = workspace
 coroutine.resume(coroutine.create(function()
    while not stopeverything do
 	   swait()
 	   if not alreadyfixing then
 		   if antivoid:IsDescendantOf(workspace) then
-			   antivoid.Position = Vector3.new(RootPart.Position.X,workspace.FallenPartsDestroyHeight+50,RootPart.Position.Z)
+			   antivoid.Position = Vector3.new(RootPart.Position.X,workspace.FallenPartsDestroyHeight+100,RootPart.Position.Z)
 		   else
 			   pcall(function()
 				   antivoid:Destroy()
@@ -2064,6 +2066,7 @@ coroutine.resume(coroutine.create(function()
 			   antivoid.Name = randomstring()
 			   antivoid.Size = Vector3.new(400,10,400)
 			   antivoid.Anchored = true
+               antivoid.CanCollide = false
 			   antivoid.Transparency = 1
 			   antivoid.Position = Vector3.new(RootPart.Position.X,workspace.FallenPartsDestroyHeight+5,RootPart.Position.Z)
 			   antivoid.Parent = workspace
@@ -2994,7 +2997,7 @@ while not stopeverything do
 			   GUN.NeonParts.Transparency = 1
 		   end
            elseif taunt.Value == "lcv2lol2" then
-               
+               walkspeed = 16
 		   if attack == false then
 			   if Torsovelocity < sensitivity/3.125 then
 				   Anim = "Idle"
@@ -3020,7 +3023,7 @@ while not stopeverything do
 			   GUN.NeonParts.Transparency = 1
 		   end
 elseif taunt.Value == "lcv2lol3" then
-               
+               walkspeed = 35
 		   if attack == false then
 			   if Torsovelocity < sensitivity/3.125 then
 				   Anim = "Idle"
@@ -3343,6 +3346,7 @@ elseif taunt.Value == "MaddoxLCv3_9" then
 		   LeftHip.C1 = Clerp(LeftHip.C1,CFrame.new(-.5,1,0,-4.37113918e-08,-0,-1,0,1,-0,1,0,-4.37113918e-08),1)
 		   RightShoulder.C1 = Clerp(RightShoulder.C1,CFrame.new(-.5,.5,0,0,0,1,0,1,-0,-1,0,0),1)
 		   LeftShoulder.C1 = Clerp(LeftShoulder.C1,CFrame.new(.5,.499975681,0,0,0,-1,0,1,0,1,0,0),1)
+walkspeed = 50
 		   if not attack then
 			   GUN.Base.Transparency = 1
 			   GUN.GunAdditions.Transparency = 1
