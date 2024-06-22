@@ -2572,6 +2572,7 @@ while not stopeverything do
 	   Humanoid.WalkSpeed = walkspeed
 	   Humanoid:SetStateEnabled(Enum.HumanoidStateType.Dead,false)
 	   Humanoid:SetStateEnabled(Enum.HumanoidStateType.Physics,false)
+	   Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing,false)
 	   Humanoid:SetStateEnabled(Enum.HumanoidStateType.Swimming,false)
 	   Humanoid:SetStateEnabled(Enum.HumanoidStateType.Flying,false)
 	   Humanoid:SetStateEnabled(Enum.HumanoidStateType.GettingUp,false)
