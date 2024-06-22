@@ -2998,7 +2998,7 @@ while not stopeverything do
 			   GUN.NeonParts.Transparency = 1
 		   end
            elseif taunt.Value == "lcv2lol2" then
-               walkspeed = 16
+               walkspeed = 20
 		   if attack == false then
 			   if Torsovelocity < sensitivity/3.125 then
 				   Anim = "Idle"
