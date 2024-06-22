@@ -2014,7 +2014,7 @@ end)
 
 Mouse.Button1Down:Connect(function()
 if stopeverything then wait(math.huge) end
-   if attack == false andthen
+   if attack == false then
 	   attackone()
    elseif attack == false  then
 	   wait(.3)
