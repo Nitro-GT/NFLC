@@ -225,6 +225,7 @@ local shade = Character["Torso"].Color
 local alreadyfixing = false
 local Effects = Instance.new("Folder")
 Effects.Parent = Character
+Effects.Name = "EffectFolder"
 local eeeblock = Instance.new("Part")
 eeeblock.Name = randomstring()
 eeeblock.CanCollide = false
