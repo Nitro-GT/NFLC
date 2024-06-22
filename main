@@ -2561,7 +2561,7 @@ while not stopeverything do
 	   Humanoid.DisplayName = "​"
 	   Humanoid.PlatformStand = ISFLYING
 	   Humanoid.UseJumpPower = true
-	   Humanoid.JumpPower = 50
+	   Humanoid.JumpPower = 0
 	   Humanoid.BreakJointsOnDeath = false
 	   Humanoid.DisplayDistanceType = "Viewer"
 	   Humanoid.Name = "Humanoid"
