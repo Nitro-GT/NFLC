@@ -1845,7 +1845,7 @@ Mouse.KeyDown:Connect(function(k)
                			  				   sound69:Play()
 			   sound69.SoundId = customasset("NFLC/MLCV39.mp3")
                dist.Level = .5
-	   elseif songid.Value == "rbxassetid://333" then
+	   elseif songid.Value == "rbxassetid://79854" then
 		   TauntRemote:FireServer("Lord",2371543268)
 			   sound69:Play()
 		   sound69.SoundId = customasset("NFLC/allgirls.mp3")
@@ -1919,6 +1919,12 @@ Mouse.KeyDown:Connect(function(k)
 		   TauntRemote:FireServer("lcv2lol2",333)
 		   sound69:Play()
 			   sound69.SoundId = customasset("NFLC/V2W.mp3")
+				   correction = true
+                   sound69.PlaybackSpeed = 1
+                                             	   elseif songid.Value == "rbxassetid://333" then
+		   TauntRemote:FireServer("lcv2lol3",79854)
+		   sound69:Play()
+			   sound69.SoundId = customasset("NFLC/song69.ogg")
 				   correction = true
                    sound69.PlaybackSpeed = 1
 	   elseif songid.Value == "rbxassetid://123" then
@@ -3007,6 +3013,35 @@ while not stopeverything do
 				RightHip.C0 = Clerp(RightHip.C0,CFrame.new(1,-.9-.2*math.cos(Sine/12),.5*math.sin(Sine/12))*CFrame.Angles(math.rad(-10-40*math.sin(Sine/12)),math.rad(90+5*math.cos(Sine/12)),math.rad(2.5*math.cos(Sine/12))),.25)
 				LeftHip.C0 = Clerp(LeftHip.C0,CFrame.new(-1,-.9+.2*math.cos(Sine/12),-.5*math.sin(Sine/12))*CFrame.Angles(math.rad(-10+40*math.sin(Sine/12)),math.rad(-90+5*math.cos(Sine/12)),math.rad(2.5*math.cos(Sine/12))),.25)
 				GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(.05,-1,-.15)*CFrame.Angles(math.rad(-90),0,0),.25)
+			   end
+			   GUN.Base.Transparency = 1
+			   GUN.GunAdditions.Transparency = 1
+			   GUN.NeonParts.Transparency = 1
+		   end
+elseif taunt.Value == "lcv2lol3" then
+               
+		   if attack == false then
+			   if Torsovelocity < sensitivity/3.125 then
+				   Anim = "Idle"
+                   		   Humanoid.HipHeight = 3
+				Welds.RootJoint.C0 = Clerp(Welds.RootJoint.C0,Welds.Defaults.RootJoint.C0*CFrame.new(0,0,-.5*math.sin(Sine/50))*CFrame.Angles(math.rad(20),0,0),.25)
+				Welds.Neck.C0 = Clerp(Welds.Neck.C0,Welds.Defaults.Neck.C0 * CFrame.new(0,0 ,0 + ((1) - 1)) * CFrame.Angles(math.rad(0+math.random(-1,1)),math.rad(0+math.random(-1,1)),math.rad(0+math.random(-1,1))),0.7/3)
+				Welds.RightShoulder.C0 = Clerp(Welds.RightShoulder.C0,CFrame.new(1.5,.5,0)*CFrame.Angles(math.rad(140-4*math.sin(Sine/50)),0,math.rad(13))*Welds.Defaults.RightShoulder.C0,.25)
+				Welds.LeftShoulder.C0 = Clerp(Welds.LeftShoulder.C0,CFrame.new(-1.5,.5,0)*CFrame.Angles(math.rad(-25),0,math.rad(-10-10*math.sin(Sine/50)))*Welds.Defaults.LeftShoulder.C0,.25)
+				Welds.RightHip.C0 = Clerp(Welds.RightHip.C0,CFrame.new(1,-1,-.01)*CFrame.Angles(math.rad(-40),math.rad(80),math.rad(10+10*math.sin(Sine/50))),.25)
+				Welds.LeftHip.C0 = Clerp(Welds.LeftHip.C0,CFrame.new(-1,-1,-.01)*CFrame.Angles(math.rad(-30),math.rad(-80),math.rad(-10-10*math.sin(Sine/50))),.25)
+				Welds.GunJoint.C0 = Clerp(Welds.GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-90+math.random(-1,1)),math.rad(0+math.random(-1,1)),math.rad(0+math.random(-1,1))),1/2)
+			   elseif Torsovelocity >= sensitivity/3.125 then
+				   Anim = "Walk"
+                   		   Humanoid.HipHeight = 3
+				Welds.LeftShoulder.C0 = Clerp(Welds.LeftShoulder.C0,CFrame.new(-1.5,.5,0)*CFrame.Angles(math.rad(20),0,math.rad(-10))*Welds.Defaults.LeftShoulder.C0,.25)
+				Welds.RootJoint.C0 = Clerp(Welds.RootJoint.C0,Welds.Defaults.RootJoint.C0*CFrame.new(0,0,-.5*math.sin(Sine/50))*CFrame.Angles(math.rad(20),0,0),.25)
+				Welds.Neck.C0 = Clerp(Welds.Neck.C0,Welds.Defaults.Neck.C0 * CFrame.new(0,0 ,0 + ((1) - 1)) * CFrame.Angles(math.rad(-50+math.random(-1,1)),math.rad(-30+math.random(-1,1)),math.rad(0+math.random(-1,1))),0.7/3)
+				Welds.RightShoulder.C0 = Clerp(Welds.RightShoulder.C0,CFrame.new(1.5,0.5,0) * CFrame.Angles(math.rad(135 + 8.5 * math.cos(Sine/15)),math.rad(-15),math.rad(25)) * RIGHTSHOULDERC0,0.7/3)
+				Welds.Neck.C0 = Clerp(Welds.Neck.C0,Welds.Defaults.Neck.C0*CFrame.new(0,0 ,0 + ((1) - 1)) * CFrame.Angles(math.rad(30+5*math.sin(Sine/50)),math.rad(0),math.rad(0)),0.7/3)
+				Welds.RightHip.C0 = Clerp(Welds.RightHip.C0,CFrame.new(1,-1,-.01)*CFrame.Angles(math.rad(10),math.rad(80),math.rad(10*math.sin(Sine/50))),.25)
+				Welds.LeftHip.C0 = Clerp(Welds.LeftHip.C0,CFrame.new(-1,-1,-.01)*CFrame.Angles(math.rad(20),math.rad(-80),math.rad(-10*math.sin(Sine/50))),.25)
+				Welds.GunJoint.C0 = Clerp(Welds.GunJoint.C0,CFrame.new(.05,-1,-.15) * CFrame.Angles(math.rad(-90+math.random(-1,1)),math.rad(0+math.random(-1,1)),math.rad(0+math.random(-1,1))),1/2)
 			   end
 			   GUN.Base.Transparency = 1
 			   GUN.GunAdditions.Transparency = 1
