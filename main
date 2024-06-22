@@ -1922,16 +1922,11 @@ Mouse.KeyDown:Connect(function(k)
 				   correction = true
                    sound69.PlaybackSpeed = 1
                                              	   elseif songid.Value == "rbxassetid://333" then
-		   TauntRemote:FireServer("lcv2lol3",4321)
+		   TauntRemote:FireServer("lcv2lol3",79854)
 		   sound69:Play()
 			   sound69.SoundId = customasset("NFLC/song69.ogg")
 				   correction = true
                    sound69.PlaybackSpeed = 1
-                                             	   elseif songid.Value == "rbxassetid://4321" then
-		   TauntRemote:FireServer("lcv2lol4",79854)
-		   sound69:Play()
-			   sound69.SoundId = customasset("NFLC/zav.mp3")
-				   correction = true
                    sound69.PlaybackSpeed = 1
 	   elseif songid.Value == "rbxassetid://123" then
 		   TauntRemote:FireServer("None",3247404955)
