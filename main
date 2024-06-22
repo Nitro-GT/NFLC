@@ -1,5 +1,4 @@
 
-_G.HIGHFPS = false
 warn([[
              ,--,               
          ,--.          ,---.'|               
@@ -22,10 +21,7 @@ Click to Shoot (does nothing)
 Uses Nitro's Oxide Reanim                                                                                                
 ]])
 -- ec4
-_G.LightingVis = false
-_G.Gun = true
-_G.msgbox = false
-_G.ExtraControllerHelp = false -- lets you see where the shot will go if fling is enabled
+
 local Defaults = {Defaults = {Neck = {C0 = CFrame.new(0,1,0)*CFrame.Angles(math.rad(-90),0,math.rad(180))},RootJoint = {C0 = CFrame.new()*CFrame.Angles(math.rad(-90),0,math.rad(180))},RightShoulder = {C0 = CFrame.new(-.5,0,0)*CFrame.Angles(0,math.rad(90),0)},LeftShoulder = {C0 = CFrame.new(.5,0,0)*CFrame.Angles(0,math.rad(-90),0)}},Neck = {C0 = CFrame.new(),C1 = CFrame.new(0,-.5,0,-1,0,0,0,0,1,0,1,0)},RootJoint = {C0 = CFrame.new(),C1 = CFrame.new(0,0,0,-1,0,0,0,0,1,0,1,0)},RightShoulder = {C0 = CFrame.new(),C1 = CFrame.new(-.5,.5,0,0,0,1,0,1,0,-1,0,0)},LeftShoulder = {C0 = CFrame.new(),C1 = CFrame.new(.5,.5,0,0,0,-1,0,1,0,1,0,0)},RightHip = {C0 = CFrame.new(),C1 = CFrame.new(.5,1,0,0,0,1,0,1,0,-1,0,0)},LeftHip = {C0 = CFrame.new(),C1 = CFrame.new(-.5,1,0,0,0,-1,0,1,0,1,0,0)},None = {C0 = CFrame.new(),C1 = CFrame.new()},Hair = {C0 = CFrame.new(.16,.5,0)*CFrame.Angles(0,math.rad(180),0),C1 = CFrame.new()},GunJoint = {C0 = CFrame.new(.05,-1,-.15)*CFrame.Angles(math.rad(-90),0,0),C1 = CFrame.new()},GunBase = {C0 = CFrame.new(0,1.305,-2.108)*CFrame.Angles(0,math.rad(-90),math.rad(-45)),C1 = CFrame.new()},GunGlow = {C0 = CFrame.new(-.024,1.369,-1.26)*CFrame.Angles(0,0,math.rad(-140.59)),C1 = CFrame.new()},GunAdditions = {C0 = CFrame.new(-.004,1.204,.505)*CFrame.Angles(0,math.rad(-90),0),C1 = CFrame.new()},Hole = {C0 = CFrame.new(-.001,1.538,-3.342)*CFrame.Angles(0,math.rad(-90),0),C1 = CFrame.new()},Hole2 = {C0 = CFrame.new(-.001,1.538,-9.142),C1 = CFrame.new()},RightWing = {C0 = CFrame.new(.15,.5,.5)*CFrame.Angles(0,math.rad(90),0),C1 = CFrame.new(1.1,1,-.75)},LeftWing = {C0 = CFrame.new(-.15,.5,.5)*CFrame.Angles(0,math.rad(90),0),C1 = CFrame.new(1.1,1,.75)}}
 local customasset
 
@@ -46,70 +42,6 @@ return s.SoundId
 end
 
 
-loadstring([[
-if _G.dAAcG3fvBqVoPzVnAFk == nil then
-_G.dAAcG3fvBqVoPzVnAFk = ""
-end
-function notify(text, overwrite, response)
-   local clickfunction = response or function() return end
-   local override = overwrite or false
-   if text == _G.dAAcG3fvBqVoPzVnAFk and override == false then return end
-   spawn(function()
-	   for i,v in pairs(game.CoreGui:GetChildren())do
-	   spawn(function()
-	   if v.Name == "MNotify" then -- deleting here
-		   pcall(function()
-		   v.ImageButton.ZIndex = 58; v.ImageButton.TextLabel.ZIndex = 59
-		   v.ImageButton:TweenPosition(UDim2.new(0.01, 0,1, 0), "Out", "Quint", .7, true)
-		   game:GetService("TweenService"):Create(v.ImageButton.TextLabel,TweenInfo.new(0.8,Enum.EasingStyle.Quint,Enum.EasingDirection.Out,0,false,0), {TextTransparency = 1})
-		   wait(1)
-		   v:Destroy()
-		   end)
-	   end
-	   end)
-   end
-   
-   _G.dAAcG3fvBqVoPzVnAFk = text
-   local clickfunction = response or function() return end
-   local function CreateInstance(cls,props)	local inst = Instance.new(cls)	for i,v in pairs(props) do	inst[i] = v	end	return inst	end
-   local MNotify = CreateInstance('ScreenGui',{DisplayOrder=0,Enabled=true,ResetOnSpawn=true,Name='MNotify', Parent=game.CoreGui})
-   local ImageButton = CreateInstance('ImageButton',{Image='rbxassetid://1051186612',ImageColor3=Color3.new(0.129412, 0.129412, 0.129412),ImageRectOffset=Vector2.new(0, 0),ImageRectSize=Vector2.new(0, 0),ImageTransparency=0,ScaleType=Enum.ScaleType.Slice,SliceCenter=Rect.new(20, 20, 20, 20),AutoButtonColor=true,Modal=false,Selected=false,Style=Enum.ButtonStyle.Custom,Active=true,AnchorPoint=Vector2.new(0, 0),BackgroundColor3=Color3.new(1, 1, 1),BackgroundTransparency=1,BorderColor3=Color3.new(0.105882, 0.164706, 0.207843),BorderSizePixel=1,ClipsDescendants=false,Draggable=false,Position=UDim2.new(0.00999999978, 0, 1, 0),Rotation=0,Selectable=true,Size=UDim2.new(0, 234, 0, 40),SizeConstraint=Enum.SizeConstraint.RelativeXY,Visible=true,ZIndex=60,Name='ImageButton',Parent = MNotify})
-   local TextLabel = CreateInstance('TextLabel',{Font=Enum.Font.SourceSansLight,FontSize=Enum.FontSize.Size24,Text=text,TextColor3=Color3.new(0.807843, 0.807843, 0.807843),TextScaled=false,TextSize=24,TextStrokeColor3=Color3.new(0, 0, 0),TextStrokeTransparency=1,TextTransparency=0,TextWrapped=false,TextXAlignment=Enum.TextXAlignment.Center,TextYAlignment=Enum.TextYAlignment.Center,Active=false,AnchorPoint=Vector2.new(0, 0),BackgroundColor3=Color3.new(1, 1, 1),BackgroundTransparency=1,BorderColor3=Color3.new(0.105882, 0.164706, 0.207843),BorderSizePixel=1,ClipsDescendants=false,Draggable=false,Position=UDim2.new(0.132478639, 0, 0, 0),Rotation=0,Selectable=false,Size=UDim2.new(0, 174, 0, 40),SizeConstraint=Enum.SizeConstraint.RelativeXY,Visible=true,ZIndex=61,Name='TextLabel',Parent = ImageButton})
-   local UIListLayout = CreateInstance('UIListLayout', {Padding = UDim.new(0, 0), FillDirection = Enum.FillDirection.Vertical, HorizontalAlignment = Enum.HorizontalAlignment.Center, SortOrder = Enum.SortOrder.Name, VerticalAlignment = Enum.VerticalAlignment.Top, Name = 'UIListLayout', Parent = ImageButton })
-   -- not setting text ^	
-   local value = 1
-   if string.len(text) <= 49 then
-	   ImageButton.Size = UDim2.new(0, game:GetService("TextService"):GetTextSize(text, 24, Enum.Font.SourceSansLight, Vector2.new(500,900)).X+57, 0, 40)
-   elseif string.len(text) > 49 then
-	   value = math.ceil(string.len(string.sub(text, 49))/9)
-	   ImageButton.Size = UDim2.new(0, game:GetService("TextService"):GetTextSize(text, 24, Enum.Font.SourceSansLight, Vector2.new(500+value*100,900)).X+57, 0, 40)
-   end
-   ImageButton:TweenPosition(UDim2.new(0.01, 0,1, -60), "Out", "Quint", .7, true)
-   spawn(function()
-	   wait(6.7)
-	   pcall(function()
-	   ImageButton.ZIndex = 58; TextLabel.ZIndex = 59
-	   ImageButton:TweenPosition(UDim2.new(0.01, 0,1, 0), "Out", "Quint", .7, true)
-	   _G.dAAcG3fvBqVoPzVnAFk = ""
-	   wait(1)
-	   MNotify:Destroy()
-	   end)
-   end)
-   ImageButton.MouseButton1Up:Connect(function()
-	   if response == nil then return end
-	   spawn(function()
-	   pcall(function()
-	   ImageButton.ZIndex = 58; TextLabel.ZIndex = 59
-	   ImageButton:TweenPosition(UDim2.new(0.01, 0,1, 0), "Out", "Quint", .7, true)
-	   _G.dAAcG3fvBqVoPzVnAFk = ""
-	   wait(1)
-	   MNotify:Destroy() end)
-	   end)
-	   clickfunction()
-   end)	
-   end)
-end
-]])
 
 
 
@@ -2082,9 +2014,9 @@ end)
 
 Mouse.Button1Down:Connect(function()
 if stopeverything then wait(math.huge) end
-   if attack == false and _G.ExtraControllerHelp == false then
+   if attack == false andthen
 	   attackone()
-   elseif attack == false and _G.ExtraControllerHelp == true then
+   elseif attack == false  then
 	   wait(.3)
 	   attackone()
    end
@@ -2540,42 +2472,7 @@ function FixLighting()
 end
 local C3 = Color3.new
 local Torso = Character.Torso
-if _G.LightingVis == true then
-   local VISUALS = game.Lighting
-local VISUALSSz = game.Lighting
-local abcdefcor = Instance.new("ColorCorrectionEffect")
-local BLOOM = Instance.new("BloomEffect")
-abcdefcor.Contrast = 0.1
-abcdefcor.Parent = VISUALS
-coroutine.resume(coroutine.create(function()
-   pcall(function()
-while true do
-   wait()
-   if correction == true then
-   
-abcdefcor.Enabled = true
-	   VISUALSSz.ExposureCompensation = 0 + sick.PlaybackLoudness/130
-		   VISUALSSz.FogEnd = sick.PlaybackLoudness
-   
-		   VISUALSSz.Brightness = 3
-		   VISUALS.FogColor = 	C3(math.min(1,sick.PlaybackLoudness/500),math.min(1,sick.PlaybackLoudness/500),math.min(1,sick.PlaybackLoudness/500))
-		   VISUALS.Ambient = 	C3(math.min(1,sick.PlaybackLoudness/500),math.min(1,sick.PlaybackLoudness/500),math.min(1,sick.PlaybackLoudness/500))
-		   VISUALS.OutdoorAmbient = 	C3(math.min(1,sick.PlaybackLoudness/500),math.min(1,sick.PlaybackLoudness/500),math.min(1,sick.PlaybackLoudness/500))
-		   VISUALS.TimeOfDay = 0
-		   VISUALS.OutdoorAmbient = 	C3(math.min(1,sick.PlaybackLoudness/500),math.min(1,sick.PlaybackLoudness/500),math.min(1,sick.PlaybackLoudness/500))
-		   abcdefcor.Contrast= 0.1 + sick.PlaybackLoudness/1000
-   BLOOM.Intensity = 0 + sick.PlaybackLoudness/500
 
-	   else
-		 
-		FixLighting()
-   end
-   end
-   end)
-end))
-	   else
-   print(" ")	    
-		   end
 workspace.ChildAdded:Connect(function(v)
    if stopeverything then wait(math.huge) end
    if v:IsA("Message") and v.Text ~= "You typed something in the require wrong." and v.Text ~= "I kinda need you to have a HumanoidRootPart to be able to do anthing, try again once you have one lol" then
