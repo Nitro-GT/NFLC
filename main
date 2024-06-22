@@ -1457,7 +1457,7 @@ function sFLY()
 				   game:GetService("RunService").RenderStepped:Wait()
 				   if not alreadyfixing then
 					   if CONTROL.L + CONTROL.R ~= 0 or CONTROL.F + CONTROL.B ~= 0 or CONTROL.Q + CONTROL.E ~= 0 then
-						   SPEED = 50
+						   SPEED = walkspeed
 					   elseif not (CONTROL.L + CONTROL.R ~= 0 or CONTROL.F + CONTROL.B ~= 0 or CONTROL.Q + CONTROL.E ~= 0) and SPEED ~= 0 then
 						   SPEED = 0
 					   end
