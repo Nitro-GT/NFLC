@@ -1,6 +1,5 @@
 
-warn([[
-             ,--,               
+warn([[           
          ,--.          ,---.'|               
        ,--.'|    ,---,.|   | :     ,----..   
    ,--,:  : |  ,'  .' |:   : |    /   /   \  
@@ -1451,8 +1450,8 @@ function sFLY()
 		   FLYING = true
 		   BG = Instance.new('BodyGyro',RootPart)
 		   BV = Instance.new('BodyVelocity',RootPart)
-		   BG.MaxTorque = Vector3.new(math.huge,math.huge,math.huge)
-		   BG.P = 1e4
+		   BG.MaxTorque = Vector3.new(9e9,9e9,9e9)
+		   BG.P = 1e5
 		   BG.CFrame = RootPart.CFrame
 		   BV.Velocity = Vector3.new(0,0,0)
 		   BV.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
@@ -1468,12 +1467,13 @@ function sFLY()
 					   if (CONTROL.L + CONTROL.R) ~= 0 or (CONTROL.F + CONTROL.B) ~= 0 or (CONTROL.Q + CONTROL.E) ~= 0 then
 						   BV.Velocity = ((workspace.CurrentCamera.CoordinateFrame.lookVector * (CONTROL.F + CONTROL.B)) + ((workspace.CurrentCamera.CoordinateFrame * CFrame.new(CONTROL.L + CONTROL.R,(CONTROL.F + CONTROL.B + CONTROL.Q + CONTROL.E) * 0.2,0).p) - workspace.CurrentCamera.CoordinateFrame.p)) * SPEED
 						   lCONTROL = {F = CONTROL.F,B = CONTROL.B,L = CONTROL.L,R = CONTROL.R}
+                             BG.CFrame = workspace.CurrentCamera.CoordinateFrame
 					   elseif (CONTROL.L + CONTROL.R) == 0 and (CONTROL.F + CONTROL.B) == 0 and (CONTROL.Q + CONTROL.E) == 0 and SPEED ~= 0 then
 						   BV.Velocity = ((workspace.CurrentCamera.CoordinateFrame.lookVector * (lCONTROL.F + lCONTROL.B)) + ((workspace.CurrentCamera.CoordinateFrame * CFrame.new(lCONTROL.L + lCONTROL.R,(lCONTROL.F + lCONTROL.B + CONTROL.Q + CONTROL.E) * 0.2,0).p) - workspace.CurrentCamera.CoordinateFrame.p)) * SPEED
 					   else
 						   BV.Velocity = Vector3.new(0,0,0)
 					   end
-					   BG.CFrame = workspace.CurrentCamera.CoordinateFrame
+					 
 				   end
 			   until not FLYING
 			   CONTROL = {F = 0,B = 0,L = 0,R = 0,Q = 0,E = 0}
