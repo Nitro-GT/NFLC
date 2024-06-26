@@ -1908,12 +1908,7 @@ Mouse.KeyDown:Connect(function(k)
 				CreateSound(1042716828,Torso,10,false)
 				TauntRemote:FireServer("iNSaNiTY",262950484)
        end
-       	   elseif songid.Value == "rbxassetid://654" then
-		   TauntRemote:FireServer("KingMan",123)
-		   sound69:Play()
-			   sound69.SoundId = "rbxassetid://9040303465"
-				   correction = true
-                   sound69.PlaybackSpeed = 1
+
        	   elseif songid.Value == "rbxassetid://3247404955" then
 		   TauntRemote:FireServer("lcv2lol",5315171837)
 		   sound69:Play()
@@ -1933,13 +1928,22 @@ Mouse.KeyDown:Connect(function(k)
 				   correction = true
                    sound69.PlaybackSpeed = 1
                    sound69.PlaybackSpeed = 1
-	   elseif songid.Value == "rbxassetid://123" then
+	   elseif songid.Value == "rbxassetid://654" then
 		   TauntRemote:FireServer("None",3247404955)
 		   sound69:Play()
 			   sound69.SoundId = customasset("NFLC/song69.ogg")
 				   correction = true
                    sound69.PlaybackSpeed = 1
 	   end
+   elseif k == "k" then
+       	   if songid.Value == "rbxassetid://333" then
+		   TauntRemote:FireServer("KingMan",333)
+		   sound69:Play()
+			   sound69.SoundId = "rbxassetid://9040303465"
+				   correction = true
+                   sound69.PlaybackSpeed = 1
+end
+end
    elseif k == "y" then
 	   if taunt.Value ~= "Fave" then
 		   TauntRemote:FireServer("Fave",290182215)
