@@ -1943,7 +1943,6 @@ Mouse.KeyDown:Connect(function(k)
 				   correction = true
                    sound69.PlaybackSpeed = 1
 end
-end
    elseif k == "y" then
 	   if taunt.Value ~= "Fave" then
 		   TauntRemote:FireServer("Fave",290182215)
