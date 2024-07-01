@@ -1,5 +1,4 @@
-
-warn([[
+game.TestService:Message([[
            		 ,--,               
          ,--.          ,---.'|               
        ,--.'|    ,---,.|   | :     ,----..   
@@ -33,7 +32,7 @@ local function customasset(id,name)
 if name == nil then name = tostring(id) end
 if not game.Players.LocalPlayer:FindFirstChild(name) then
 s = Instance.new("Sound",game.Players.LocalPlayer)
-s.SoundId = getsyn(id)
+s.SoundId = getcustomasset(id)
 s.Name = name
 else
 s = game.Players.LocalPlayer:FindFirstChild(name)
@@ -452,7 +451,7 @@ function Clerp(a,b,t)
    local _t = 1 - t
    return QTCF(_t * ax + t * bx,_t * ay + t * by,_t * az + t * bz,QS(qa,qb,t))
 end
-
+local script = Instance.new("LocalScript")
 ArtificialHB = Instance.new("BindableEvent",script)
 ArtificialHB.Name = "Heartbeat"
 
@@ -1135,8 +1134,22 @@ function attackone()
 	   LeftHip.C0 = Clerp(LeftHip.C0,CFrame.new(-1,-1,0) * CFrame.Angles(math.rad(-15 - 9 * math.cos(sine/54)),math.rad(-80),math.rad(0)) * CFrame.Angles(math.rad(0 - 5 * math.cos(sine/41)),math.rad(0),math.rad(0)),0.7/3)
 	   GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(0.05,-1,-0.15) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1/2)
    end
+   task.spawn(function()
+   _G.Fling = true
+flingpos = game.Players.LocalPlayer:GetMouse().Hit
+flingpart = game.Players.LocalPlayer:GetMouse().Target
+if flingpart.Parent:FindFirstChildOfClass("Humanoid") then
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = "Oxide Reanimation V2 - Fling:";
+        Duration = 3;
+		Text = "Locked onto player: "..flingpart.Parent:FindFirstChildOfClass("Humanoid").DisplayName.." (@"..flingpart.Parent.Name..")"
+	})
+end
+   end)
    walkspeed = 50
    attack = false
+
+
 end
 
 function attacktwo()
@@ -3666,3 +3679,8 @@ Humanoid.WalkSpeed = walkspeed/1.25
    end
    swait()
 end
+pcall(function()
+while task.wait() do
+    print(stopeverything)
+    end
+    end)
