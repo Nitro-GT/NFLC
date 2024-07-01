@@ -1137,7 +1137,8 @@ function attackone()
    task.spawn(function()
    _G.Fling = true
 flingpos = game.Players.LocalPlayer:GetMouse().Hit
-flingpart = game.Players.LocalPlayer:GetMouse().Target
+_G.flingpart = game.Players.LocalPlayer:GetMouse().Target
+flingpart = _G.flingpart
 if flingpart.Parent:FindFirstChildOfClass("Humanoid") then
 	game:GetService("StarterGui"):SetCore("SendNotification", {
 		Title = "Oxide Reanimation V2 - Fling:";
