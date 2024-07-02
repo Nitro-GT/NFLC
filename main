@@ -1139,8 +1139,10 @@ function attackone()
    _G.Fling = true
 flingpos = game.Players.LocalPlayer:GetMouse().Hit
 _G.flingpart = game.Players.LocalPlayer:GetMouse().Target
+_G.flingplr = nil
 flingpart = _G.flingpart
 if flingpart.Parent:FindFirstChildOfClass("Humanoid") then
+_G.flingplr = tostring(flingpart.Parent:FindFirstChildOfClass("Humanoid").DisplayName.." (@"..flingpart.Parent.Name..")")
 	game:GetService("StarterGui"):SetCore("SendNotification", {
 		Title = "Oxide Reanimation V2 - Fling:";
         Duration = 3;
