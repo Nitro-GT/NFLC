@@ -845,6 +845,8 @@ coroutine.resume(coroutine.create(function()
 				   GUN.NeonParts.Color = Color3.new(sound69.PlaybackLoudness/20,0,0)
    elseif taunt.Value == "sis" then
 				   GUN.NeonParts.Color = Color3.new(sound69.PlaybackLoudness/15,0,0)
+   elseif taunt.Value == "KingMan" then
+				   GUN.NeonParts.Color = Color3.new(sound69.PlaybackLoudness/100,0,0)
 			   elseif taunt.Value == "kArmA" then
 				   GUN.NeonParts.Color = Color3.new(1,1,1)
 		   elseif taunt.Value == "Lord" then
@@ -1956,7 +1958,7 @@ Mouse.KeyDown:Connect(function(k)
        	   if songid.Value == "rbxassetid://333" then
 		   TauntRemote:FireServer("KingMan",333)
 		   sound69:Play()
-			   sound69.SoundId = "rbxassetid://1838031267"
+			   sound69.SoundId = customasset("NFLC/kim.mp3")
 				   correction = true
                    sound69.PlaybackSpeed = 1
 end
