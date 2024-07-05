@@ -1137,6 +1137,7 @@ function attackone()
 	   LeftHip.C0 = Clerp(LeftHip.C0,CFrame.new(-1,-1,0) * CFrame.Angles(math.rad(-15 - 9 * math.cos(sine/54)),math.rad(-80),math.rad(0)) * CFrame.Angles(math.rad(0 - 5 * math.cos(sine/41)),math.rad(0),math.rad(0)),0.7/3)
 	   GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(0.05,-1,-0.15) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1/2)
    end
+   task.spawn(function()
    _G.Fling = true
 flingpos = game.Players.LocalPlayer:GetMouse().Hit
 flingpart = game.Players.LocalPlayer:GetMouse().Target
