@@ -1138,11 +1138,11 @@ function attackone()
 	   GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(0.05,-1,-0.15) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1/2)
    end
    task.spawn(function()
-   _G.Fling = true
 flingpos = game.Players.LocalPlayer:GetMouse().Hit
 flingpart = game.Players.LocalPlayer:GetMouse().Target
 _G.flingplr = nil
 if flingpart.Parent:FindFirstChildOfClass("Humanoid") then
+   _G.Fling = true
 _G.flingpart = flingpart
 _G.flingplr = tostring(flingpart.Parent:FindFirstChildOfClass("Humanoid").DisplayName.." (@"..flingpart.Parent.Name..")")
 	game:GetService("StarterGui"):SetCore("SendNotification", {
