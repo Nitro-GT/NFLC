@@ -163,13 +163,8 @@ local LeftHip = Torso["Left Hip"]
 
 local Effects = nil
 local Eyes = nil
-local Replica = game:GetObjects("rbxassetid://7921736307")[1]
+local Replica = game:GetObjects("rbxassetid://18457710208")[1]
 local GUN = Replica.MegaGunnModel
-for i,v in pairs(GUN:GetChildren()) do
-   if v:IsA("BasePart") or v:IsA("MeshPart") then
-	   v.Transparency = 1
-   end
-end
 local sound69 = Instance.new("Sound",Character.HumanoidRootPart)
 sound69.Looped = true
 sound69.Name = "LC SONG LOL!! GETCUSTOMASSET LOL!! I LOVE GETCUSTOMASSET!! DONT BAN ME PLS!!! "
