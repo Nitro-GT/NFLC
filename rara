@@ -182,39 +182,6 @@ GUN.Parent = Character
 local GunJoint = GUN.Joint.Weld
 GUN.Joint.Weld.Part0 = RightArm
 local Welds = {Defaults = {Neck = {C0 = CFrame.new(0,1,0)*CFrame.Angles(math.rad(-90),0,math.rad(180))},RootJoint = {C0 = CFrame.new()*CFrame.Angles(math.rad(-90),0,math.rad(180))},RightShoulder = {C0 = CFrame.new(-.5,0,0)*CFrame.Angles(0,math.rad(90),0)},LeftShoulder = {C0 = CFrame.new(.5,0,0)*CFrame.Angles(0,math.rad(-90),0)}},Neck = {C0 = CFrame.new(),C1 = CFrame.new(0,-.5,0,-1,0,0,0,0,1,0,1,0)},RightShoulder = RightShoulder, Neck = Neck, LeftShoulder = LeftShoulder, LeftHip = LeftHip, RightHip = RightHip, RootJoint = RootJoint, GunJoint = GunJoint}
-game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle:BreakJoints()
-local PositionOffset = Vector3.new(2.025, 1.87, 0)
-local RotationOffset = Vector3.new(180,0, 135)
-RotationOffset = CFrame.Angles(
-   math.rad(RotationOffset.X),
-   math.rad(RotationOffset.Y),
-   math.rad(RotationOffset.Z)
-)
-
-local CFrameOffset = CFrame.new(PositionOffset)*RotationOffset
-
-local weld = Instance.new("Weld")
-weld.C1 = CFrameOffset
-weld.Parent = game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle
-weld.Part0 = game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle
-weld.Part1 = GUN.Base
-game.Players.LocalPlayer.Character["Accessory (VoidAlligatorJaw)"].Handle:BreakJoints()
-local PositionOffset2 = Vector3.new(-1.85, -1.687, 0)
-local RotationOffset2 = Vector3.new(180,0, 135)
-RotationOffset2 = CFrame.Angles(
-   math.rad(RotationOffset2.X),
-   math.rad(RotationOffset2.Y),
-   math.rad(RotationOffset2.Z)
-)
-
-local CFrameOffset2 = CFrame.new(PositionOffset2)*RotationOffset2
-
-local weld2 = Instance.new("Weld")
-weld2.C1 = CFrameOffset2
-weld2.Parent = game.Players.LocalPlayer.Character["Accessory (VoidAlligatorJaw)"].Handle
-weld2.Part0 = game.Players.LocalPlayer.Character["Accessory (VoidAlligatorJaw)"].Handle
-weld2.Part1 = GUN.Base
-
 
 
 
@@ -1964,46 +1931,27 @@ end
            sound69.SoundId = customasset("NFLC/nulled.mp3")
            sound69:Play()
            dist.Level = .5
-               game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.C1  = CFrameOffsetG
-           weld2.C1 = CFrameOffsetG
-               game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.Part1  = game.Players.LocalPlayer.Character["HumanoidRootPart"]
-           weld2.Part1  = game.Players.LocalPlayer.Character["HumanoidRootPart"]
 	   else
 		   TauntRemote:FireServer("None",3247404955)
              sound69.SoundId = customasset("NFLC/song69.ogg")
                         dist.Level = 0
-           game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.C1  = CFrameOffset
-           weld2.C1 = CFrameOffset2
-                          game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.Part1  = GUN.Base
-           weld2.Part1  = GUN.Base
+
 	   end
    elseif k == "t" then
 	   if taunt.Value ~= "Krump" then
 		   TauntRemote:FireServer("Krump",1511734302)
-              game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.C1  = CFrameOffsetG
-           weld2.C1 = CFrameOffsetG
-                         game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.Part1  = game.Players.LocalPlayer.Character["HumanoidRootPart"]
-           weld2.Part1  = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+
 	   else
 		   TauntRemote:FireServer("None",3247404955)
-               game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.C1  = CFrameOffset
-           weld2.C1 = CFrameOffset2
-                                     game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.Part1  = GUN.Base
-           weld2.Part1  = GUN.Base
+
 	   end
    elseif k == "u" then
 	   if taunt.Value ~= "OOOOO" then
 		   TauntRemote:FireServer("OOOOO",2681542649)
-              game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.C1  = CFrameOffsetG
-           weld2.C1 = CFrameOffsetG
-                         game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.Part1  = game.Players.LocalPlayer.Character["HumanoidRootPart"]
-           weld2.Part1  = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+
 	   else
 		   TauntRemote:FireServer("None",3247404955)
-         game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.C1  = CFrameOffset
-           weld2.C1 = CFrameOffset2
-                                     game.Players.LocalPlayer.Character["Accessory (VoidRPG)"].Handle.Weld.Part1  = GUN.Base
-           weld2.Part1  = GUN.Base
+
 	   end
    elseif k == "f" then
 	   ISFLYING = not ISFLYING
